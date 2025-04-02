@@ -1,28 +1,25 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-nav: true
-nav_order: 1
-subtitle: Ontario, Canada
+nav: false
+nav_order:
+subtitle:
 
 profile:
-  align: right
+  align: left
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: >
 
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: true # includes a list of papers marked as "selected={true}"
+social: false # includes social icons at the bottom of the page
 
 announcements:
   enabled: false # includes a list of news items
   scrollable: false # adds a vertical scroll bar if there are more than 3 news items
   limit: 50 # leave blank to include all the news in the `_news` folder
 ---
+I’m Yue Xu, a postdoctoral fellow at the Leslie Dan Faculty of Pharmacy, University of Toronto, affiliated with UHN-PRiME. My research lies at the intersection of medicinal chemistry, nanomedicine, and artificial intelligence (AI). Specifically, I focus on developing high-throughput screening platforms to optimize lipid nanoparticles (LNPs) for various biomedical applications. 
 
-I’m Yue Xu, a postdoctoral fellow at the University of Toronto’s Leslie Dan Faculty of Pharmacy, affiliated with UHN-PRiME. My research is at the intersection of medicinal chemistry, nanomedicine, and AI, where I build high-throughput screening platforms for lipid nanoparticle (LNP) development. I specialize in lipid design and synthesis, with applications in gene therapy, cancer immunotherapy, and intranasal vaccination.
-
-Previously, I completed my PhD in medicinal chemistry at China Pharmaceutical University and have since published high-impact research on lipid droplet imaging, CRISPR delivery systems.
-
-Outside of the lab, I think a lot about how AI can accelerate drug discovery, and how we might make scientific research workflows more reproducible, explainable, and scalable.
+During my academic journey, I earned a PhD in medicinal chemistry from China Pharmaceutical University. In my current role, I am particularly interested in leveraging AI to accelerate drug discovery processes. By integrating machine learning models with experimental workflows, I aim to enhance the reproducibility, explainability, and scalability of scientific research. My goal is to bridge the gap between computational predictions and experimental validation, enabling more efficient and precise therapeutic development.
