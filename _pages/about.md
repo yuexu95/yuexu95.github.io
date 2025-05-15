@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Yue Xu, Ph.D.
+subtitle: 
 
 profile:
   align: left
