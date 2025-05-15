@@ -7,38 +7,26 @@ first_name: Yue
 middle_name:
 last_name: Xu
 contact_note: >
-  You can reach me at my email address.
+  You can reach me at my email at <a href="mailto:cpuxuyue@gmail.com">cpuxuyue@gmail.com</a>.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  I am a researcher in the field of lipid nanoparticles and their applications in drug delivery.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords: lipid nanoparticles, AI for science, Drug Discovery # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://yuexu95.github.io # the base hostname & protocol for your site
-baseurl: 
+baseurl: # the subpath of your site, if any (for example: /blog)
 last_updated: true # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
 
 excludes:
   - _pages/blog.md
-  - _pages/books.md
-  - _pages/cv.md
-  - _pages/dropdown.md
-  - _pages/news.md
-  - _pages/profiles.md
-  - _pages/projects.md
-  - _pages/repositories.md
-  - _pages/teaching.md
   - _posts/
   - _projects/?_project.md
   - assets/jupyter/blog.ipynb
-  - _news/announcement_*.md
-  - _books/?.md
+  # - _news/announcement_*.md
 # -----------------------------------------------------------------------------
 # Theme
 # -----------------------------------------------------------------------------
@@ -150,10 +138,10 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Newsletter
 # -----------------------------------------------------------------------------
 
-# newsletter:
-#   enabled: false
-#   endpoint: # your loops endpoint (e.g., https://app.loops.so/api/newsletter-form/YOUR-ENDPOINT)
-#   # https://loops.so/docs/forms/custom-form
+ newsletter:
+   enabled: false
+   endpoint: # your loops endpoint (e.g., https://app.loops.so/api/newsletter-form/YOUR-ENDPOINT)
+   # https://loops.so/docs/forms/custom-form
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -262,18 +250,18 @@ terser:
 # Jekyll Archives
 # -----------------------------------------------------------------------------
 
-jekyll-archives:
-  posts:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
-    permalinks:
-      year: "/blog/:year/"
-      tags: "/blog/:type/:name/"
-      categories: "/blog/:type/:name/"
-  books:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+# jekyll-archives:
+#   posts:
+#     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+#     permalinks:
+#       year: "/blog/:year/"
+#       tags: "/blog/:type/:name/"
+#       categories: "/blog/:type/:name/"
+#   books:
+#     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
+# display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
+# display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
