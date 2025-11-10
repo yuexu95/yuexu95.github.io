@@ -25,10 +25,11 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 #   limit: 3 # leave blank to include all the blog posts
 
 ---
-I am an Instructor at **Baylor College of Medicine** since October 2025 and completed my **UHN-PRiME postdoctoral fellowship** in **Bowen Li’s lab** at the **Leslie Dan Faculty of Pharmacy, University of Toronto** from 2022 to 2025. My research integrates **artificial intelligence** with **molecular design and drug delivery** to accelerate biomedical discovery.
 
-I was trained in **medicinal chemistry**, earning a **Ph.D. from China Pharmaceutical University**, and during my postdoctoral training I brought a computational perspective to experimental science, developing **AI-guided platforms** that drive innovation in **nanomedicine**. 
+I am an Instructor at **Baylor College of Medicine** since October 2025 and completed my **UHN-PRiME postdoctoral fellowship** in **Bowen Li’s lab** at the **Leslie Dan Faculty of Pharmacy, University of Toronto**.
+
+I was trained in **medicinal chemistry**, earning a **Ph.D. from China Pharmaceutical University**, and during my postdoctoral training I brought a computational perspective to experimental science, developing predictive models and analyses to guide synthesis and biological testing.
 
 My current work focuses on building a **high-throughput screening platform** using rational design to evaluate **lipid nanoparticles (LNPs)** for **mRNA delivery**. 
 
-By combining **modular lipid synthesis** with **real-time data acquisition** and **AI-driven modeling**, my approach enables rapid identification of delivery vectors with superior **in vivo** performance across **intranasal, intratumoral, and systemic** routes.
+By combining **modular lipid synthesis** with **real-time data acquisition** and **AI-driven modeling**, my approach enables rapid identification of delivery vectors with superior **in vivo** performance.
