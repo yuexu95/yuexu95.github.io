@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Jekyll Dev Server (Docker)",
+      "runtimeExecutable": "docker-compose",
+      "runtimeArgs": ["up"],
+      "port": 8080
+    },
+    {
+      "name": "Jekyll Dev Server (Docker Slim)",
+      "runtimeExecutable": "docker-compose",
+      "runtimeArgs": ["-f", "docker-compose-slim.yml", "up"],
+      "port": 8080
+    },
+    {
+      "name": "Jekyll Dev Server (Local)",
+      "runtimeExecutable": "bundle",
+      "runtimeArgs": ["exec", "jekyll", "serve", "--watch", "--port=8080", "--host=0.0.0.0", "--livereload"],
+      "port": 8080
+    }
+  ]
+}

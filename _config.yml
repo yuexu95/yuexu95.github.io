@@ -267,8 +267,8 @@ terser:
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Yue]
-  first_name: [Xu]
+  last_name: [Xu]
+  first_name: [Yue, Y.]
 
   style: apa
   locale: en
