@@ -1,4 +1,4 @@
-<div class="news" style="font-size: 0.5em">
+<div class="news" style="font-size: 0.5em; color: white">
   {% assign news_items = site.news | sort: 'date' | reverse %}
   {% if news_items.size > 0 %}
     {% if include.limit %}
@@ -31,7 +31,7 @@
               {% endif %}
             </td>
             {% if item.location %}
-              <td class="text-end" style="white-space: nowrap; font-size: 1.50em; color: var(--global-text-color)">&mdash; {{ item.location }}</td>
+              <td class="text-end" style="white-space: nowrap; font-size: 1.50em; color: white">&mdash; {{ item.location }}</td>
             {% else %}
               <td></td>
             {% endif %}
