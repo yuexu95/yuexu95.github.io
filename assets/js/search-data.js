@@ -27,7 +27,7 @@ ninja.data = [{
           title: 'Joined Baylor College of Medicine as an Instructor',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/https:/www.bcm.edu/people-search/yue-xu-201661/";
+              window.location.href = "/news/announcement_1.html";
             },},{id: "news-grand-rounds-talk-at-bcm-section-of-epidemiology-amp-population-sciences",
           title: 'Grand Rounds talk at BCM Section of Epidemiology &amp;amp; Population Sciences',
           description: "",
