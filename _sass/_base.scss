@@ -207,6 +207,12 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+.news table td,
+.news table th {
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+}
+
 .post article strong {
   color: #5b9bd5;
   font-weight: normal;

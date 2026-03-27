@@ -11,22 +11,30 @@
         style="max-height: 60vw"
       {% endif %}
     >
-      <table class="table table-sm table-borderless">
+      <table class="table table-sm table-borderless" style="border-spacing: 0; border-collapse: collapse">
         {% for item in news_items %}
           <tr>
-            <th scope="row" style="width: fit-content; white-space: nowrap; padding-right: 1rem; font-weight: normal">{{ item.date | date: '%b %Y' }}</th>
+            <th scope="row" style="width: fit-content; white-space: nowrap; padding-right: 1rem; font-weight: normal">
+              {% if item.redirect %}
+                <a href="{{ item.redirect }}" target="_blank" style="color: inherit; text-decoration: underline">{{ item.date | date: '%b %Y' }}</a>
+              {% elsif item.inline == false or item.inline == nil %}
+                <a href="{{ item.url | relative_url }}" style="color: inherit; text-decoration: underline">{{ item.date | date: '%b %Y' }}</a>
+              {% else %}
+                {{ item.date | date: '%b %Y' }}
+              {% endif %}
+            </th>
             <td>
               {% if item.inline %}
                 {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-              {% elsif item.redirect %}
-                <a class="news-title" href="{{ item.redirect }}" target="_blank">{{ item.title }}</a>
               {% else %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-              {% endif %}
-              {% if item.location %}
-                <span class="text-muted" style="font-size: 0.85em"> &mdash; {{ item.location }}</span>
+                {{ item.title }}
               {% endif %}
             </td>
+            {% if item.location %}
+              <td class="text-muted text-end" style="white-space: nowrap; font-size: 1.50em">&mdash; {{ item.location }}</td>
+            {% else %}
+              <td></td>
+            {% endif %}
           </tr>
         {% endfor %}
       </table>
