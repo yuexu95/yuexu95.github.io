@@ -7,6 +7,7 @@ permalink: /news/scba-award/
 ---
 
 Yue Xu Received the SCBA Toronto Chapter 2024 Paper Award.
+
 <div class="mt-3">
   {% include figure.liquid path="assets/img/SCBA.jpg" class="img-fluid rounded" alt="SCBA Award" %}
 </div>
