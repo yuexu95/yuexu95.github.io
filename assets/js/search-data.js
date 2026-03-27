@@ -37,12 +37,12 @@ ninja.data = [{
           title: 'Incoming PI and Assistant Professor positions at Children&amp;#39;s Mercy and UMKC/KUMC',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/incoming-pi-positions/";
+              window.location.href = "/news/announcement_2.html";
             },},{id: "news-invited-talk-at-nih-nci-ai-closed-loop-self-driving-lab-for-gene-delivery",
           title: 'Invited talk at NIH NCI — AI-Closed Loop Self-driving Lab for Gene Delivery...',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/nih-nci-talk/";
+              window.location.href = "/news/announcement_3.html";
             },},{id: "news-selected-for-aacr-2026-invited-oral-talk",
           title: 'Selected for AACR 2026 Invited Oral Talk',
           description: "",
