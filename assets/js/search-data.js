@@ -23,7 +23,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/news/";
           },
-        },{id: "news-joined-baylor-college-of-medicine-as-an-instructor",
+        },{id: "news-scba-toronto-chapter-2024-paper-award",
+          title: 'SCBA Toronto Chapter 2024 Paper Award',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/scba-award/";
+            },},{id: "news-joined-baylor-college-of-medicine-as-an-instructor",
           title: 'Joined Baylor College of Medicine as an Instructor',
           description: "",
           section: "News",handler: () => {
@@ -47,7 +52,7 @@ ninja.data = [{
           title: 'Selected for AACR 2026 Invited Oral Talk',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/aacr-2026/";
+              window.location.href = "/news/announcement_5.html";
             },},{
         id: 'social-email',
         title: 'email',
