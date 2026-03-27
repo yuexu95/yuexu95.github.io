@@ -1,0 +1,7 @@
+---
+date: 2025-10-01
+title: "Joined Baylor College of Medicine as an Instructor"
+inline: false
+---
+
+Started as an Instructor at Baylor College of Medicine, building a high-throughput screening platform to evaluate lipid nanoparticles (LNPs) for mRNA delivery.
