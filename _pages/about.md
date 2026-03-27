@@ -15,7 +15,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 announcements:
   enabled: true
   scrollable: true
-  limit: 5
+  limit: 7
 ---
 
 I am an Instructor at **Baylor College of Medicine** since October 2025 and completed my **UHN-PRiME postdoctoral fellowship** in **Bowen Li’s lab** at the **Leslie Dan Faculty of Pharmacy, University of Toronto**.
