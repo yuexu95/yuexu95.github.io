@@ -1,5 +1,5 @@
 ---
-date: 2025-10-01
+date: 2025-10-27
 title: "Joined Baylor College of Medicine as an Instructor"
 inline: false
 ---
