@@ -17,7 +17,7 @@
             <th scope="row" style="width: fit-content; white-space: nowrap; padding-right: 1rem; font-weight: normal">
               {% if item.redirect %}
                 <a href="{{ item.redirect }}" target="_blank" style="color: inherit; text-decoration: underline">{{ item.date | date: '%b %Y' }}</a>
-              {% elsif item.inline == false or item.inline == nil %}
+              {% elsif item.inline == false or item.inline == null %}
                 <a href="{{ item.url | relative_url }}" style="color: inherit; text-decoration: underline">{{ item.date | date: '%b %Y' }}</a>
               {% else %}
                 {{ item.date | date: '%b %Y' }}
