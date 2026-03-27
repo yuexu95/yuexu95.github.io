@@ -229,7 +229,7 @@ defaults:
       path: ""
       type: news
     values:
-      layout: post
+      layout: page
 
 sass:
   style: compressed
