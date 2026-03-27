@@ -23,8 +23,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/news/";
           },
-        },{id: "news-scba-toronto-chapter-2024-paper-award",
-          title: 'SCBA Toronto Chapter 2024 Paper Award',
+        },{id: "news-scba-toronto-chapter-2025-paper-award",
+          title: 'SCBA Toronto Chapter 2025 Paper Award',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/scba-award/";
