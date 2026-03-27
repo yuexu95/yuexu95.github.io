@@ -2,6 +2,7 @@
 date: 2026-03-15
 title: "Incoming PI and Assistant Professor positions at Children's Mercy and UMKC/KUMC"
 inline: false
+location: "Kansas City, MO/KS, USA"
 redirect: https://www.childrensmercy.org/childrens-mercy-research-institute/
 ---
 

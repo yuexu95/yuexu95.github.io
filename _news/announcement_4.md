@@ -2,6 +2,7 @@
 date: 2026-02-26
 title: "Grand Rounds talk at BCM Section of Epidemiology & Population Sciences"
 inline: false
+location: "Houston, TX, USA"
 permalink: /news/bcm-grand-rounds/
 ---
 
