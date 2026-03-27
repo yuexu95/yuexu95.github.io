@@ -1,4 +1,4 @@
-<div class="news" style="font-size: 0.9em">
+<div class="news" style="font-size: 0.5em">
   {% assign news_items = site.news | sort: 'date' | reverse %}
   {% if news_items.size > 0 %}
     {% if include.limit %}
@@ -14,7 +14,7 @@
       <table class="table table-sm table-borderless">
         {% for item in news_items %}
           <tr>
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %Y' }}</th>
+            <th scope="row" style="width: fit-content; white-space: nowrap; padding-right: 1rem; font-weight: normal">{{ item.date | date: '%b %Y' }}</th>
             <td>
               {% if item.inline %}
                 {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}

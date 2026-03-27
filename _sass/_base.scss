@@ -207,6 +207,11 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+.post article strong {
+  color: #5b9bd5;
+  font-weight: normal;
+}
+
 .profile.float-right {
   margin-left: 1rem;
 }
@@ -707,6 +712,7 @@ footer.sticky-bottom {
 
   h2 {
     margin-bottom: 1rem;
+    font-weight: normal;
 
     span {
       font-size: 1.5rem;
