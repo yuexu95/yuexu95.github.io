@@ -16,7 +16,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{
+        },{id: "nav-news",
+          title: "News",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/news/";
+          },
+        },{id: "news-joined-baylor-college-of-medicine-as-an-instructor",
+          title: 'Joined Baylor College of Medicine as an Instructor',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_1.html";
+            },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
