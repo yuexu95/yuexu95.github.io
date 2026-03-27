@@ -23,36 +23,31 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/news/";
           },
-        },{id: "news-scba-toronto-chapter-2024-paper-award",
-          title: 'SCBA Toronto Chapter 2024 Paper Award',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_7.html";
-            },},{id: "news-joined-baylor-college-of-medicine-as-an-instructor",
+        },{id: "news-joined-baylor-college-of-medicine-as-an-instructor",
           title: 'Joined Baylor College of Medicine as an Instructor',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/announcement_1.html";
-            },},{id: "news-selected-for-aacr-2026-invited-oral-talk",
-          title: 'Selected for AACR 2026 Invited Oral Talk',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_5.html";
+              window.location.href = "/news/bcm-instructor/";
             },},{id: "news-grand-rounds-talk-at-bcm-section-of-epidemiology-amp-population-sciences",
           title: 'Grand Rounds talk at BCM Section of Epidemiology &amp;amp; Population Sciences',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/announcement_4.html";
-            },},{id: "news-invited-talk-at-nih-nci-ai-closed-loop-self-driving-lab-for-gene-delivery",
-          title: 'Invited talk at NIH NCI — AI-Closed Loop Self-driving Lab for Gene Delivery...',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_3.html";
+              window.location.href = "/news/bcm-grand-rounds/";
             },},{id: "news-incoming-pi-and-assistant-professor-positions-at-children-39-s-mercy-and-umkc-kumc",
           title: 'Incoming PI and Assistant Professor positions at Children&amp;#39;s Mercy and UMKC/KUMC',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/announcement_2.html";
+              window.location.href = "/news/incoming-pi-positions/";
+            },},{id: "news-invited-talk-at-nih-nci-ai-closed-loop-self-driving-lab-for-gene-delivery",
+          title: 'Invited talk at NIH NCI — AI-Closed Loop Self-driving Lab for Gene Delivery...',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/nih-nci-talk/";
+            },},{id: "news-selected-for-aacr-2026-invited-oral-talk",
+          title: 'Selected for AACR 2026 Invited Oral Talk',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/aacr-2026/";
             },},{
         id: 'social-email',
         title: 'email',
