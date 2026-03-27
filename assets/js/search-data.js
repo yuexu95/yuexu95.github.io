@@ -43,8 +43,8 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2.html";
-            },},{id: "news-invited-talk-at-nih-nci-ai-closed-loop-self-driving-lab-for-gene-delivery",
-          title: 'Invited talk at NIH NCI — AI-Closed Loop Self-driving Lab for Gene Delivery...',
+            },},{id: "news-invited-talk-at-nih-nci-as-2026-cap-it-early-career-investigator",
+          title: 'Invited talk at NIH NCI as 2026 CAP-IT early career investigator',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_3.html";
