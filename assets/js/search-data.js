@@ -23,11 +23,31 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/news/";
           },
-        },{id: "news-joined-baylor-college-of-medicine-as-an-instructor",
+        },{id: "news-received-the-scba-toronto-chapter-2024-paper-award",
+          title: 'Received the SCBA Toronto Chapter 2024 Paper Award.',
+          description: "",
+          section: "News",},{id: "news-joined-baylor-college-of-medicine-as-an-instructor",
           title: 'Joined Baylor College of Medicine as an Instructor',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_1.html";
+            },},{id: "news-awarded-the-nci-cap-it-2026-summit-scholarship-for-early-stage-investigators",
+          title: 'Awarded the NCI CAP-IT 2026 Summit Scholarship for Early-Stage Investigators.',
+          description: "",
+          section: "News",},{id: "news-selected-for-an-invited-oral-talk-at-the-american-association-for-cancer-research-aacr-annual-meeting-2026",
+          title: 'Selected for an invited oral talk at the American Association for Cancer Research...',
+          description: "",
+          section: "News",},{id: "news-invited-to-present-at-the-section-of-epidemiology-amp-amp-population-sciences-grand-rounds-baylor-college-of-medicine-houston-tx-on-ai-closed-loop-self-driving-lab-for-gene-delivery",
+          title: 'Invited to present at the Section of Epidemiology &amp;amp;amp; Population Sciences Grand Rounds,...',
+          description: "",
+          section: "News",},{id: "news-gave-an-invited-talk-at-nih-nci-md-usa-on-ai-closed-loop-self-driving-lab-for-gene-delivery",
+          title: 'Gave an invited talk at NIH NCI, MD, USA on “AI-Closed Loop Self-driving...',
+          description: "",
+          section: "News",},{id: "news-incoming-pi-and-assistant-professor-positions-at-children-39-s-mercy-and-umkc-kumc",
+          title: 'Incoming PI and Assistant Professor positions at Children&amp;#39;s Mercy and UMKC/KUMC',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_2.html";
             },},{
         id: 'social-email',
         title: 'email',
