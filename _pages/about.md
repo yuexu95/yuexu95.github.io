@@ -19,7 +19,7 @@ announcements:
 ---
 
 <div style="text-align: justify" markdown="1">
-Dr. Yue Xu is an Instructor at [**Baylor College of Medicine**](https://www.bcm.edu/) at [**Yong Li's lab**](https://www.bcm.edu/research/faculty-labs/yong-li-lab) since October 2025 and completed my [**UHN-PRiME postdoctoral fellowship**](https://prime.utoronto.ca/) in [**Bowen Li’s lab**](https://www.li-bowen.com/) at the [**Leslie Dan Faculty of Pharmacy, University of Toronto**](https://www.utoronto.ca/).
-I was trained in medicinal chemistry, earning a Ph.D. from [**China Pharmaceutical University**](https://www.en.cpu.edu.cn/), and during my postdoctoral training I brought a computational perspective to experimental science, developing predictive models and analyses to guide synthesis and biological testing.
-My current work focuses on building a high-throughput screening platform using rational design to evaluate lipid nanoparticles (LNPs) for mRNA delivery.
+Dr. Yue Xu is an Instructor at [**Baylor College of Medicine**](https://www.bcm.edu/) at [**Yong Li's lab**](https://www.bcm.edu/research/faculty-labs/yong-li-lab) since October 2025 and completed his [**UHN-PRiME postdoctoral fellowship**](https://prime.utoronto.ca/) in [**Bowen Li’s lab**](https://www.li-bowen.com/) at the [**Leslie Dan Faculty of Pharmacy, University of Toronto**](https://www.utoronto.ca/).
+He was trained in medicinal chemistry, earning a Ph.D. from [**China Pharmaceutical University**](https://www.en.cpu.edu.cn/), and during his postdoctoral training, he brought a computational perspective to experimental science, developing predictive models and analyses to guide synthesis and biological testing.
+His current work focuses on building a high-throughput screening platform using rational design to evaluate lipid nanoparticles (LNPs) for mRNA delivery.
 </div>
