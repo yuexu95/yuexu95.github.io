@@ -23,33 +23,33 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/news/";
           },
-        },{id: "news-scba-toronto-chapter-2025-paper-award",
-          title: 'SCBA Toronto Chapter 2025 Paper Award',
+        },{id: "news-yue-xu-received-the-scba-toronto-chapter-2025-paper-award",
+          title: 'Yue Xu Received the SCBA Toronto Chapter 2025 Paper Award',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/scba-award/";
-            },},{id: "news-joined-baylor-college-of-medicine-as-an-instructor",
-          title: 'Joined Baylor College of Medicine as an Instructor',
+            },},{id: "news-yue-xu-joined-baylor-college-of-medicine-as-an-instructor",
+          title: 'Yue Xu Joined Baylor College of Medicine as an Instructor',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_1.html";
-            },},{id: "news-grand-rounds-talk-at-bcm-section-of-epidemiology-amp-population-sciences",
-          title: 'Grand Rounds talk at BCM Section of Epidemiology &amp;amp; Population Sciences',
+            },},{id: "news-yue-xu-delivered-a-grand-rounds-talk-at-bcm-epidemiology-and-population-sciences",
+          title: 'Yue Xu Delivered a Grand Rounds Talk at BCM Epidemiology and Population Sciences...',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/bcm-grand-rounds/";
-            },},{id: "news-incoming-pi-and-assistant-professor-positions-at-children-39-s-mercy-and-umkc-kumc",
-          title: 'Incoming PI and Assistant Professor positions at Children&amp;#39;s Mercy and UMKC/KUMC',
+            },},{id: "news-yue-xu-to-join-children-39-s-mercy-and-umkc-kumc-as-pi-and-assistant-professor",
+          title: 'Yue Xu to Join Children&amp;#39;s Mercy and UMKC/KUMC as PI and Assistant Professor...',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2.html";
-            },},{id: "news-invited-talk-at-nih-nci-as-2026-cap-it-early-career-investigator",
-          title: 'Invited talk at NIH NCI as 2026 CAP-IT early career investigator',
+            },},{id: "news-yue-xu-was-invited-to-speak-at-nih-nci-as-a-2026-cap-it-early-career-investigator",
+          title: 'Yue Xu Was Invited to Speak at NIH NCI as a 2026 CAP-IT...',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_3.html";
-            },},{id: "news-selected-for-aacr-2026-invited-oral-talk",
-          title: 'Selected for AACR 2026 Invited Oral Talk',
+            },},{id: "news-yue-xu-was-selected-for-an-invited-oral-presentation-at-aacr-2026",
+          title: 'Yue Xu Was Selected for an Invited Oral Presentation at AACR 2026',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_5.html";
