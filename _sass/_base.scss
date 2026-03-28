@@ -214,6 +214,11 @@ ul.task-list input[type="checkbox"] {
   color: var(--global-text-color);
 }
 
+.news .news-name-highlight {
+  color: var(--global-theme-color);
+  font-weight: normal;
+}
+
 .post article strong {
   color: #4da6ff;
   font-weight: normal;

@@ -24,10 +24,11 @@
               {% endif %}
             </th>
             <td>
+              {% assign highlighted_title = item.title | replace: 'Yue Xu', '<span class="news-name-highlight">Yue Xu</span>' %}
               {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
+                {{ item.content | remove: '<p>' | remove: '</p>' | replace: 'Yue Xu', '<span class="news-name-highlight">Yue Xu</span>' | emojify }}
               {% else %}
-                {{ item.title }}
+                {{ highlighted_title }}
               {% endif %}
             </td>
             {% if item.location %}
