@@ -5,6 +5,7 @@ title: Publications
 description:
 nav: true
 nav_order: 2
+navbar_social: true
 ---
 
 <!-- _pages/publications.md -->
