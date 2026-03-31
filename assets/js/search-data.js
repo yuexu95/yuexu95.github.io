@@ -38,8 +38,8 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/bcm-grand-rounds/";
-            },},{id: "news-yue-xu-to-join-children-39-s-mercy-and-umkc-kumc-as-pi-and-assistant-professor",
-          title: 'Yue Xu to Join Children&amp;#39;s Mercy and UMKC/KUMC as PI and Assistant Professor...',
+            },},{id: "news-yue-xu-will-join-children-39-s-mercy-and-umkc-kumc-as-pi-and-assistant-professor",
+          title: 'Yue Xu Will Join Children&amp;#39;s Mercy and UMKC/KUMC as PI and Assistant Professor...',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2.html";
