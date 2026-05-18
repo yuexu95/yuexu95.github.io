@@ -53,6 +53,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_5.html";
+            },},{id: "news-yue-xu-attended-the-2026-asgct-annual-meeting-in-boston-ma-usa",
+          title: 'Yue Xu attended the 2026 ASGCT Annual Meeting in Boston, MA, USA',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_7.html";
             },},{
         id: 'social-email',
         title: 'email',
