@@ -58,6 +58,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_7.html";
+            },},{id: "news-yue-xu-joined-the-children-s-mercy-research-institute-as-a-principal-investigator",
+          title: 'Yue Xu joined the Children’s Mercy Research Institute as a principal investigator',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_8.html";
             },},{
         id: 'social-email',
         title: 'email',
