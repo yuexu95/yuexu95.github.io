@@ -1,6 +1,6 @@
 ---
 date: 2026-04-20
-title: "Yue Xu Was Selected for an Invited Oral Presentation at AACR 2026"
+title: "Yue Xu was selected for an Invited Oral Presentation at AACR 2026"
 inline: false
 location: "San Diego, CA, USA"
 image: "assets/img/AACR_2026.webp"

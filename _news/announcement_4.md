@@ -1,6 +1,6 @@
 ---
 date: 2026-02-26
-title: "Yue Xu Delivered a Grand Rounds Talk at BCM Epidemiology and Population Sciences"
+title: "Yue Xu delivered a Grand Rounds Talk at BCM Epidemiology and Population Sciences"
 inline: false
 location: "Houston, TX, USA"
 permalink: /news/bcm-grand-rounds/
