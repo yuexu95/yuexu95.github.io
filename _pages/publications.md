@@ -2,22 +2,51 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: "(<em><sup>*</sup> Co-first author; <sup>#</sup> Corresponding author</em>)"
 nav: true
-nav_order: 2
+nav_order: 3
 navbar_social: true
 _styles: >
-  .post-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
-  .post-header-left { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; }
-  .post-description { margin: 0 !important; font-weight: normal; color: inherit; }
+  .post-header { display: none; }
+  .post > article { margin-top: 0 !important; padding-top: 0 !important; }
 ---
 
-<!-- _pages/publications.md -->
+<style>
+.pub-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+}
+.pub-header-left {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.pub-main-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  padding-bottom: 0.45rem;
+  border-bottom: 3px solid #4da6ff;
+  display: inline-block;
+}
+.pub-desc {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light, #888);
+  margin: 0;
+}
+</style>
 
-<!-- Year Filter Dropdown -->
-
-<div class="year-filter-container" style="margin-bottom: 1rem;">
-  <select id="year-filter" class="form-select" style="width: auto; display: inline-block;">
+<div class="pub-header-row">
+  <div class="pub-header-left">
+    <span class="pub-main-title">Publications</span>
+    <span class="pub-desc"><em>(<sup>*</sup> Co-first author; <sup>#</sup> Corresponding author)</em></span>
+  </div>
+  <select id="year-filter" class="form-select" style="width: auto;">
     <option value="all">All Years</option>
     <option value="2026">2026</option>
     <option value="2025">2025</option>
@@ -33,26 +62,6 @@ _styles: >
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  // Move year filter into the post-header, aligned right
-  var header = document.querySelector(".post-header");
-  var filterContainer = document.querySelector(".year-filter-container");
-  if (header && filterContainer) {
-    // Wrap existing title + description in a left group
-    var left = document.createElement("div");
-    left.className = "post-header-left";
-    var title = header.querySelector(".post-title");
-    var desc = header.querySelector(".post-description");
-    if (title) left.appendChild(title);
-    if (desc) {
-      left.appendChild(desc);
-      desc.style.fontSize = window.getComputedStyle(title).fontSize;
-    }
-    header.appendChild(left);
-    // Move filter to the right
-    filterContainer.style.marginBottom = "0";
-    header.appendChild(filterContainer);
-  }
-
   document.getElementById("year-filter").addEventListener("change", function () {
     var selected = this.value;
     document.querySelectorAll("h2.bibliography").forEach(function (h2) {
