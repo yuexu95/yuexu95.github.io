@@ -9,12 +9,33 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-publications",
+  },{id: "nav-home",
+          title: "Home",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/";
+          },
+        },{id: "nav-research",
+          title: "Research",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/research/";
+          },
+        },{id: "nav-publications",
           title: "Publications",
-          description: "(* Co-first author; # Corresponding author)",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
+          },
+        },{id: "nav-members",
+          title: "Members",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/members/";
           },
         },{id: "nav-news",
           title: "News",
@@ -22,6 +43,20 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/news/";
+          },
+        },{id: "nav-resources",
+          title: "Resources",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/resources/";
+          },
+        },{id: "nav-join-us",
+          title: "Join Us",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/join/";
           },
         },{id: "news-yue-xu-received-the-scba-toronto-chapter-2025-paper-award",
           title: 'Yue Xu received the SCBA Toronto Chapter 2025 Paper Award',
