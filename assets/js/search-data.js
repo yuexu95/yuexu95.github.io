@@ -24,32 +24,32 @@ ninja.data = [{
             window.location.href = "/news/";
           },
         },{id: "news-yue-xu-received-the-scba-toronto-chapter-2025-paper-award",
-          title: 'Yue Xu Received the SCBA Toronto Chapter 2025 Paper Award',
+          title: 'Yue Xu received the SCBA Toronto Chapter 2025 Paper Award',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/scba-award/";
             },},{id: "news-yue-xu-joined-baylor-college-of-medicine-as-an-instructor",
-          title: 'Yue Xu Joined Baylor College of Medicine as an Instructor',
+          title: 'Yue Xu joined Baylor College of Medicine as an Instructor',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_1.html";
             },},{id: "news-yue-xu-delivered-a-grand-rounds-talk-at-bcm-epidemiology-and-population-sciences",
-          title: 'Yue Xu Delivered a Grand Rounds Talk at BCM Epidemiology and Population Sciences...',
+          title: 'Yue Xu delivered a Grand Rounds Talk at BCM Epidemiology and Population Sciences...',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/bcm-grand-rounds/";
             },},{id: "news-yue-xu-will-join-children-39-s-mercy-and-umkc-kumc-as-pi-and-assistant-professor",
-          title: 'Yue Xu Will Join Children&amp;#39;s Mercy and UMKC/KUMC as PI and Assistant Professor...',
+          title: 'Yue Xu will join Children&amp;#39;s Mercy and UMKC/KUMC as PI and Assistant Professor...',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_2.html";
             },},{id: "news-yue-xu-was-invited-to-speak-at-nih-nci-as-a-2026-cap-it-early-career-investigator",
-          title: 'Yue Xu Was Invited to Speak at NIH NCI as a 2026 CAP-IT...',
+          title: 'Yue Xu was invited to Speak at NIH NCI as a 2026 CAP-IT...',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_3.html";
             },},{id: "news-yue-xu-was-selected-for-an-invited-oral-presentation-at-aacr-2026",
-          title: 'Yue Xu Was Selected for an Invited Oral Presentation at AACR 2026',
+          title: 'Yue Xu was selected for an Invited Oral Presentation at AACR 2026',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_5.html";
