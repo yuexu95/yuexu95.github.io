@@ -245,7 +245,7 @@ no_top_margin: true
   font-size: 0.72rem !important;
   padding: 0.15rem 0.55rem !important;
   border-radius: 20px !important;
-  background: #ffffff !important;
+  background: var(--global-bg-color) !important;
   color: var(--global-text-color) !important;
   font-weight: 600 !important;
   border: 1.5px solid #4da6ff !important;
