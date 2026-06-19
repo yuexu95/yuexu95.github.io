@@ -234,7 +234,7 @@ a.pub-pill:hover {
     <h3>Lipid Nanoparticle Engineering</h3>
     <p>We apply rational design principles and high-throughput combinatorial chemistry to synthesize structurally diverse ionizable lipids with tunable organ tropism, biodegradability, and endosomal escape efficiency.</p>
     <ul class="area-highlights">
-      <li><details><summary>Passerini-3CR reaction</summary><div class="detail-text">Modular, one-pot multicomponent synthesis of biodegradable ionizable lipids for mRNA delivery. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://doi.org/10.1073/pnas.2409572122" target="_blank" rel="noopener">PNAS 2025</a></div></div></details></li>
+      <li><details><summary>Passerini-3CR</summary><div class="detail-text">Modular, one-pot multicomponent synthesis of biodegradable ionizable lipids for mRNA delivery. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://doi.org/10.1073/pnas.2409572122" target="_blank" rel="noopener">PNAS 2025</a></div></div></details></li>
       <li><details><summary>Ugi-3CR</summary><div class="detail-text">High-throughput synthesis libraries enabling rapid SAR exploration across lipid tail, head group, and linker space. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://doi.org/10.1073/pnas.2309472120" target="_blank" rel="noopener">PNAS 2023</a></div></div></details></li>
     </ul>
   </div>
