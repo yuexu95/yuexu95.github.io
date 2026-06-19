@@ -226,6 +226,38 @@ no_top_margin: true
   transition: opacity 0.2s;
 }
 .affil-strip img:hover { opacity: 1; }
+
+/* ── Abbr badges (Cell, Nat. Biotechnol., etc.) ─ */
+.publications abbr.badge {
+  background: transparent !important;
+  color: #1a7fff !important;
+  border: 1.5px solid #4da6ff !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  border-radius: 6px !important;
+  padding: 0.2rem 0.45rem !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+
+/* ── Publication buttons ──────────────────────── */
+.publications .btn.btn-sm.z-depth-0 {
+  font-size: 0.72rem !important;
+  padding: 0.15rem 0.55rem !important;
+  border-radius: 20px !important;
+  background: #ffffff !important;
+  color: var(--global-text-color) !important;
+  font-weight: 600 !important;
+  border: 1.5px solid #4da6ff !important;
+  box-shadow: none !important;
+  line-height: 1.6 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+.publications .btn.btn-sm.z-depth-0:hover {
+  background: #4da6ff !important;
+  color: #fff !important;
+}
 </style>
 
 <!-- ── HERO ─────────────────────────────────────── -->
