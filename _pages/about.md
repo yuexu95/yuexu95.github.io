@@ -83,8 +83,10 @@ no_top_margin: true
 .btn-hp {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
-  padding: 0.75rem 1.6rem;
+  flex: 1;
+  padding: 0.75rem 1rem;
   border-radius: 10px;
   font-size: 0.92rem;
   font-weight: 600;
@@ -257,35 +259,36 @@ no_top_margin: true
   <div class="research-card">
     <i class="rc-icon ti ti-brain"></i>
     <h5>AI for Drug Delivery</h5>
-    <p>Developing foundation model-driven and deep learning platforms — including AGILE and LUMI-lab — to autonomously discover and optimize ionizable lipids for mRNA delivery at unprecedented speed.</p>
+    <p>Foundation model-powered and deep learning platforms — including LUMI-lab and AGILE — that autonomously close the loop between computational prediction and experimental validation to accelerate ionizable lipid discovery.</p>
     <div class="rc-tags">
       <span class="rc-tag">Deep Learning</span>
-      <span class="rc-tag">Active Learning</span>
       <span class="rc-tag">Self-Driving Lab</span>
-    </div>
-  </div>
-
-  <div class="research-card">
-    <i class="rc-icon ti ti-flask"></i>
-    <h5>Ionizable Lipid Engineering</h5>
-    <p>Rational design and combinatorial synthesis of ionizable lipids — including biodegradable variants via Passerini reaction — for organ-selective and tissue-targeted nucleic acid delivery.</p>
-    <div class="rc-tags">
-      <span class="rc-tag">Rational Design</span>
-      <span class="rc-tag">Combinatorial Chemistry</span>
-      <span class="rc-tag">LNP</span>
+      <span class="rc-tag">Foundation Model</span>
     </div>
   </div>
 
   <div class="research-card">
     <i class="rc-icon ti ti-dna"></i>
-    <h5>Cancer Gene Therapeutics</h5>
-    <p>Engineering mRNA, siRNA, circular RNA, and gene editing delivery systems — including tumor-tailored LNPs for IL-12 circular RNA immunotherapy, inhaled base editing in the lung, and genome editing in the brain.</p>
+    <h5>Cancer Immunotherapy & Gene Therapy</h5>
+    <p>Nucleic acid delivery systems operating on two fronts: reprogramming the immune system to eradicate pediatric tumors (IL-12 circRNA, ICD), and correcting disease-causing mutations in rare genetic diseases (base editing, genome editing).</p>
     <div class="rc-tags">
-      <span class="rc-tag">mRNA</span>
-      <span class="rc-tag">Base Editing</span>
-      <span class="rc-tag">Circular RNA</span>
-      <span class="rc-tag">Immunotherapy</span>
+      <span class="rc-tag">Cancer Immunotherapy</span>
+      <span class="rc-tag">Gene Editing</span>
+      <span class="rc-tag">Rare Disease</span>
     </div>
   </div>
+
+  <div class="research-card">
+    <i class="rc-icon ti ti-flask"></i>
+    <h5>Lipid Nanoparticle Engineering</h5>
+    <p>Rational design and high-throughput combinatorial chemistry to build structurally diverse ionizable lipids — including biodegradable variants via Passerini reaction — for organ-selective nucleic acid delivery.</p>
+    <div class="rc-tags">
+      <span class="rc-tag">Combinatorial Chemistry</span>
+      <span class="rc-tag">Biodegradable LNP</span>
+      <span class="rc-tag">Tissue Selectivity</span>
+    </div>
+  </div>
+
+
 
 </div>

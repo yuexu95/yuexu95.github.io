@@ -113,20 +113,36 @@ no_top_margin: true
   padding: 0;
   margin: 0 0 1rem 0;
 }
-.area-highlights li {
-  font-size: 0.88rem;
-  padding: 0.35rem 0 0.35rem 1.3rem;
-  position: relative;
-  color: var(--global-text-color-light, #555);
-  line-height: 1.5;
+.area-highlights li { margin-bottom: 0.3rem; }
+.area-highlights details {
+  padding-left: 0;
 }
-.area-highlights li::before {
+.area-highlights summary {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--global-text-color);
+  cursor: pointer;
+  padding: 0.3rem 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  user-select: none;
+}
+.area-highlights summary::before {
   content: "▸";
-  position: absolute;
-  left: 0;
   color: #4da6ff;
-  font-size: 0.8rem;
-  top: 0.4rem;
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+.area-highlights details[open] summary::before { transform: rotate(90deg); }
+.area-highlights summary::-webkit-details-marker { display: none; }
+.area-highlights .detail-text {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light, #666);
+  line-height: 1.6;
+  padding: 0.4rem 0 0.5rem;
 }
 .pub-pills {
   display: flex;
@@ -141,6 +157,13 @@ no_top_margin: true
   color: #1a7fff;
   font-weight: 600;
   background: rgba(77,166,255,0.06);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+a.pub-pill:hover {
+  background: #4da6ff;
+  color: #fff;
+  text-decoration: none;
 }
 
 .sec-title {
@@ -177,61 +200,42 @@ no_top_margin: true
     <i class="ti ti-brain"></i>
   </div>
   <div class="area-body">
-    <h3>AI-Driven LNP Discovery</h3>
-    <p>We develop foundation model-powered and deep learning platforms that close the loop between computational prediction and experimental validation, enabling autonomous discovery of ionizable lipids for mRNA delivery at unprecedented speed and scale.</p>
+    <h3>AI for Drug Delivery</h3>
+    <p>We build foundation model-powered and deep learning platforms that autonomously close the loop between computational prediction and experimental validation — dramatically accelerating the discovery of ionizable lipids for nucleic acid delivery.</p>
     <ul class="area-highlights">
-      <li><strong>LUMI-lab</strong> — a foundation model-driven self-driving laboratory that autonomously designs, synthesizes, and screens new ionizable lipid structures (<em>Cell</em>, 2026)</li>
-      <li><strong>AGILE Platform</strong> — active machine learning approach using deep neural networks to accelerate LNP formulation optimization (<em>Nature Communications</em>, 2024)</li>
-      <li><strong>Multi-objective AI</strong> — reinforcement learning framework for simultaneous optimization of potency, selectivity, and tolerability (<em>Nature Biotechnology</em>, 2026)</li>
+      <li><details><summary>LUMI-lab</summary><div class="detail-text">A foundation model-driven self-driving laboratory that autonomously designs, synthesizes, and evaluates new ionizable lipid structures for mRNA delivery. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://doi.org/10.1016/j.cell.2026.01.012" target="_blank" rel="noopener">Cell 2026</a></div></div></details></li>
+      <li><details><summary>AGILE Platform</summary><div class="detail-text">Active machine learning approach using deep neural networks to accelerate LNP formulation optimization. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://doi.org/10.1038/s41467-024-50619-z" target="_blank" rel="noopener">Nature Communications 2024</a></div></div></details></li>
+      <li><details><summary>Multi-objective AI</summary><div class="detail-text">Reinforcement learning framework for simultaneous optimization of potency, tissue selectivity, and tolerability. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://www.nature.com/articles/s41587-026-03109-0" target="_blank" rel="noopener">Nature Biotechnology 2026</a></div></div></details></li>
     </ul>
-    <div class="pub-pills">
-      <span class="pub-pill">Cell 2026</span>
-      <span class="pub-pill">Nature Communications 2024</span>
-      <span class="pub-pill">Nature Biotechnology 2026</span>
-    </div>
   </div>
 </div>
 
 <!-- Area 2 -->
 <div class="area-section">
   <div class="area-icon-wrap">
-    <i class="ti ti-flask"></i>
+    <i class="ti ti-dna"></i>
   </div>
   <div class="area-body">
-    <h3>Ionizable Lipid Engineering</h3>
-    <p>We apply rational design principles and high-throughput combinatorial chemistry to synthesize structurally diverse ionizable lipids with tunable organ tropism, biodegradability, and endosomal escape efficiency.</p>
+    <h3>Cancer Immunotherapy & Gene Therapy</h3>
+    <p>We engineer nucleic acid delivery systems operating on two fronts: reprogramming the immune system to eradicate pediatric tumors, and correcting disease-causing mutations in children with rare genetic diseases.</p>
     <ul class="area-highlights">
-      <li><strong>Passerini reaction</strong> — modular, one-pot multicomponent synthesis of biodegradable ionizable lipids for mRNA delivery (<em>PNAS</em>, 2025)</li>
-      <li><strong>Combinatorial chemistry</strong> — high-throughput synthesis libraries enabling rapid SAR exploration across lipid tail, head group, and linker space (<em>PNAS</em>, 2023; <em>J. Mater. Chem. B</em>, 2023)</li>
-      <li><strong>Tissue-selective delivery</strong> — engineering LNPs for organ-specific targeting including liver, lung, muscle, and brain</li>
+      <li><details><summary>Cancer immunotherapy</summary><div class="detail-text">Tumor-tailored LNPs for IL-12 circular RNA delivery to activate anti-tumor immunity, and a modular mRNA platform for programmable induction of tumour-specific immunogenic cell death. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://doi.org/10.1002/adma.202400307" target="_blank" rel="noopener">Advanced Materials 2024</a><a class="pub-pill" href="https://www.nature.com/articles/s41565-025-02045-5" target="_blank" rel="noopener">Nature Nanotechnology 2025</a></div></div></details></li>
+      <li><details><summary>Gene editing for rare disease</summary><div class="detail-text">Inhaled LNPs delivering base editors to correct lung mutations, and biodegradable LNPs for intrathecal genome editing targeting neurological diseases. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://www.nature.com/articles/s41563-026-02555-0" target="_blank" rel="noopener">Nature Materials 2026</a><a class="pub-pill" href="https://doi.org/10.1016/j.mattod.2025.11.032" target="_blank" rel="noopener">Materials Today 2025</a></div></div></details></li>
     </ul>
-    <div class="pub-pills">
-      <span class="pub-pill">PNAS 2025</span>
-      <span class="pub-pill">PNAS 2023</span>
-      <span class="pub-pill">J. Mater. Chem. B 2023</span>
-    </div>
   </div>
 </div>
 
 <!-- Area 3 -->
 <div class="area-section">
   <div class="area-icon-wrap">
-    <i class="ti ti-dna"></i>
+    <i class="ti ti-flask"></i>
   </div>
   <div class="area-body">
-    <h3>Nucleic Acid-based Cancer Therapeutics</h3>
-    <p>We engineer LNP delivery systems tailored to diverse nucleic acid payloads — mRNA, siRNA, circular RNA, and gene editing components — and apply them to treat cancer and genetic diseases across multiple tissues and routes of administration.</p>
+    <h3>Lipid Nanoparticle Engineering</h3>
+    <p>We apply rational design principles and high-throughput combinatorial chemistry to synthesize structurally diverse ionizable lipids with tunable organ tropism, biodegradability, and endosomal escape efficiency.</p>
     <ul class="area-highlights">
-      <li><strong>IL-12 circular RNA immunotherapy</strong> — tumor-tailored LNPs enabling IL-12 circRNA delivery for enhanced lung cancer immunotherapy (<em>Advanced Materials</em>, 2024)</li>
-      <li><strong>Inhaled base editing</strong> — amino acid-derived ionizable lipids for inhaled delivery of base editors to correct disease-causing mutations in the lung (<em>Nature Materials</em>, 2026)</li>
-      <li><strong>Brain genome editing</strong> — biodegradable LNPs for intrathecal delivery of gene editing tools targeting neurological diseases (<em>Materials Today</em>, 2025)</li>
-      <li><strong>mRNA vaccines</strong> — adjuvanting ionizable lipids and mRNA to enhance immunogenicity of LNP-based vaccines (<em>Nature Biomedical Engineering</em>, 2023)</li>
+      <li><details><summary>Passerini-3CR reaction</summary><div class="detail-text">Modular, one-pot multicomponent synthesis of biodegradable ionizable lipids for mRNA delivery. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://doi.org/10.1073/pnas.2409572122" target="_blank" rel="noopener">PNAS 2025</a></div></div></details></li>
+      <li><details><summary>Ugi-3CR</summary><div class="detail-text">High-throughput synthesis libraries enabling rapid SAR exploration across lipid tail, head group, and linker space. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://doi.org/10.1073/pnas.2309472120" target="_blank" rel="noopener">PNAS 2023</a></div></div></details></li>
     </ul>
-    <div class="pub-pills">
-      <span class="pub-pill">Nature Materials 2026</span>
-      <span class="pub-pill">Advanced Materials 2024</span>
-      <span class="pub-pill">Nat. Biomed. Eng. 2023</span>
-      <span class="pub-pill">Materials Today 2025</span>
-    </div>
   </div>
 </div>
