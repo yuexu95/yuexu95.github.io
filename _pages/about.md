@@ -264,8 +264,8 @@ no_top_margin: true
 <div class="hero-wrap">
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <div class="hero-title">Yue Xu, Ph.D.</div>
-    <div class="hero-subtitle">Division of Molecular Oncology & Cellular Therapeutics &nbsp;·&nbsp; Department of Pediatrics</div>
+    <div class="hero-title">Xu Lab</div>
+    <div class="hero-subtitle">Center for Molecular Oncology and Cellular Therapeutics (MOCT)</div>
     <div class="hero-subtitle">Children's Mercy Research Institute, Kansas City, MO</div>
     <div class="hero-tagline">
       Engineering AI-driven platforms and ionizable lipid nanoparticles to transform nucleic acid delivery into precision medicine for pediatric cancer and genetic diseases.

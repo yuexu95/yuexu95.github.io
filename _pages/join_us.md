@@ -56,7 +56,10 @@ navbar_social: true
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  cursor: pointer;
+  list-style: none;
 }
+.position-card-header::-webkit-details-marker { display: none; }
 .position-card-header i {
   font-size: 1.6rem;
   color: #4da6ff;
@@ -66,6 +69,15 @@ navbar_social: true
   font-weight: 700;
   margin: 0;
 }
+.position-card-header::after {
+  content: "\276F";
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light, #999);
+  transition: transform 0.2s ease;
+}
+.position-details[open] > .position-card-header::after { transform: rotate(90deg); }
+.position-details:not([open]) > .position-card-header { border-bottom: none; }
 .position-card-body {
   padding: 1.2rem 1.4rem 1.4rem;
   font-size: 0.88rem;
@@ -138,62 +150,72 @@ navbar_social: true
 </style>
 
 
+<div class="note-box">
+  Minority applicants and individuals from underrepresented backgrounds in STEM are highly encouraged to apply. The Xu Lab is committed to fostering a diverse, inclusive, and collaborative research environment.
+</div>
+
 <!-- OPEN POSITIONS -->
 <div class="sec-title">Open Positions</div>
 
 <div class="position-grid">
 
   <div class="position-card">
-    <div class="position-card-header">
-      <i class="ti ti-microscope"></i>
-      <h3>Postdoctoral Scholars</h3>
-    </div>
-    <div class="position-card-body">
-      <p>We seek postdoctoral researchers with a strong track record and expertise in one or more of the following areas:</p>
-      <ul class="req-list">
-        <li>Lipid nanoparticle formulation & characterization</li>
-        <li>Nucleic acid therapeutics (mRNA, siRNA, gene editing)</li>
-        <li>AI/machine learning for drug delivery</li>
-        <li>Organic / medicinal chemistry</li>
-        <li>In vivo animal models of cancer or genetic disease</li>
-      </ul>
-      <p>The ideal candidate is highly motivated, open-minded, creative, and energetic, with a genuine interest in translating novel technologies into clinical investigation.</p>
-      <p><strong>To apply:</strong> Email Dr. Xu with subject line <em>"Postdoc Application"</em>. Please include a single PDF with a cover letter, full CV with publication list, up to three representative papers, and contact information for at least three references.</p>
-    </div>
+    <details class="position-details">
+      <summary class="position-card-header">
+        <i class="ti ti-microscope"></i>
+        <h3>Postdoctoral Scholars</h3>
+      </summary>
+      <div class="position-card-body">
+        <p>We seek postdoctoral researchers with a strong track record and expertise in one or more of the following areas:</p>
+        <ul class="req-list">
+          <li>Lipid nanoparticle formulation & characterization</li>
+          <li>Nucleic acid therapeutics (mRNA, siRNA, gene editing)</li>
+          <li>AI/machine learning for drug delivery</li>
+          <li>Organic / medicinal chemistry</li>
+          <li>In vivo animal models of cancer or genetic disease</li>
+        </ul>
+        <p>The ideal candidate is highly motivated, open-minded, creative, and energetic, with a genuine interest in translating novel technologies into clinical investigation.</p>
+        <p><strong>To apply:</strong> Email Dr. Xu with subject line <em>"Postdoc Application"</em>. Please include a single PDF with a cover letter, full CV with publication list, up to three representative papers, and contact information for at least three references.</p>
+      </div>
+    </details>
   </div>
 
   <div class="position-card">
-    <div class="position-card-header">
-      <i class="ti ti-school"></i>
-      <h3>Graduate Students</h3>
-    </div>
-    <div class="position-card-body">
-      <p>We welcome prospective PhD students interested in conducting research at the interface of chemistry, bioengineering, and medicine. Competitive candidates will have strong academic achievements in:</p>
-      <ul class="req-list">
-        <li>Chemistry, Pharmaceutical Sciences, or Biochemistry</li>
-        <li>Bioengineering or Material Science</li>
-        <li>Biology, Medicine, or a closely related discipline</li>
-      </ul>
-      <p>Candidates must be highly motivated, creative, and open-minded. Minority applicants are highly encouraged to apply.</p>
-      <p><strong>To apply:</strong> Email Dr. Xu with subject line <em>"PhD Application"</em> along with your CV and a brief statement of research interests.</p>
-    </div>
+    <details class="position-details">
+      <summary class="position-card-header">
+        <i class="ti ti-school"></i>
+        <h3>Graduate Students</h3>
+      </summary>
+      <div class="position-card-body">
+        <p>We welcome prospective PhD students interested in conducting research at the interface of chemistry, bioengineering, and medicine. Competitive candidates will have strong academic achievements in:</p>
+        <ul class="req-list">
+          <li>Chemistry, Pharmaceutical Sciences, or Biochemistry</li>
+          <li>Bioengineering or Material Science</li>
+          <li>Biology, Medicine, or a closely related discipline</li>
+        </ul>
+        <p>Candidates must be highly motivated, creative, and open-minded. Minority applicants are highly encouraged to apply.</p>
+        <p><strong>To apply:</strong> Email Dr. Xu with subject line <em>"PhD Application"</em> along with your CV and a brief statement of research interests.</p>
+      </div>
+    </details>
   </div>
 
   <div class="position-card">
-    <div class="position-card-header">
-      <i class="ti ti-user-star"></i>
-      <h3>Undergraduate Students</h3>
-    </div>
-    <div class="position-card-body">
-      <p>We offer research opportunities for motivated undergraduate students who wish to gain hands-on experience in cutting-edge biomedical research. Students from all relevant disciplines are welcome, including:</p>
-      <ul class="req-list">
-        <li>Chemistry, Biology, or Biochemistry</li>
-        <li>Biomedical or Chemical Engineering</li>
-        <li>Computer Science / Data Science</li>
-      </ul>
-      <p>Undergraduate researchers will be mentored directly by graduate students and postdocs, with guidance from Dr. Xu.</p>
-      <p><strong>To apply:</strong> Email Dr. Xu with subject line <em>"Undergraduate Research"</em> with your CV and a brief description of your interests and availability.</p>
-    </div>
+    <details class="position-details">
+      <summary class="position-card-header">
+        <i class="ti ti-user-star"></i>
+        <h3>Undergraduate</h3>
+      </summary>
+      <div class="position-card-body">
+        <p>We offer research opportunities for motivated undergraduate students who wish to gain hands-on experience in cutting-edge biomedical research. Students from all relevant disciplines are welcome, including:</p>
+        <ul class="req-list">
+          <li>Chemistry, Biology, or Biochemistry</li>
+          <li>Biomedical or Chemical Engineering</li>
+          <li>Computer Science / Data Science</li>
+        </ul>
+        <p>Undergraduate researchers will be mentored directly by graduate students and postdocs, with guidance from Dr. Xu.</p>
+        <p><strong>To apply:</strong> Email Dr. Xu with subject line <em>"Undergraduate Research"</em> with your CV and a brief description of your interests and availability.</p>
+      </div>
+    </details>
   </div>
 
 </div>
@@ -209,10 +231,6 @@ navbar_social: true
   </div>
   <div class="contact-row">
     <i class="ti ti-map-pin"></i>
-    <span>Children's Mercy Research Institute, 2401 Gillham Rd, Kansas City, MO 64108</span>
+    <span><a href="https://maps.google.com/?q=2401+Gillham+Rd,+Kansas+City,+MO+64108" target="_blank" rel="noopener">Children's Mercy Research Institute, 2401 Gillham Rd, Kansas City, MO 64108</a></span>
   </div>
-</div>
-
-<div class="note-box">
-  Minority applicants and individuals from underrepresented backgrounds in STEM are highly encouraged to apply. The Xu Lab is committed to fostering a diverse, inclusive, and collaborative research environment.
 </div>
