@@ -186,7 +186,7 @@ navbar_social: true
 
   <div class="pi-card">
     <div class="pi-left">
-      <img class="pi-photo" src="/assets/img/Qi%20Miao.png" alt="Qi Miao">
+      <img class="pi-photo" src="/assets/img/Qi Miao.jpg" alt="Qi Miao">
       <h3 class="pi-name">Qi Miao, Ph.D.</h3>
       <p class="pi-role">Senior Research Associate</p>
       <p class="pi-edu">Postdoc, Baylor College of Medicine</p>
@@ -207,7 +207,7 @@ navbar_social: true
 
   <div class="pi-card">
     <div class="pi-left">
-      <img class="pi-photo" src="/assets/img/Yukuan.png" alt="Yu-Kuan Pan">
+      <img class="pi-photo" src="/assets/img/Yukuan.jpg" alt="Yu-Kuan Pan">
       <h3 class="pi-name">Yu-Kuan (Andy) Pan, M.S.</h3>
       <p class="pi-role">Bioinformatics Scientist</p>
       <p class="pi-edu">M.S., UTHealth Houston</p>
