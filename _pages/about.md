@@ -138,9 +138,9 @@ no_top_margin: true
 /* ── Section title ────────────────────────────── */
 .sec-title,
 .post article > h2 {
-  font-size: 1.55rem !important;
+  font-size: 1.25rem !important;
   font-weight: 700 !important;
-  margin-bottom: 1.4rem !important;
+  margin-bottom: 0.8rem !important;
   margin-top: 0 !important;
   padding-bottom: 0.45rem !important;
   border-bottom: 3px solid #4da6ff !important;
@@ -158,17 +158,24 @@ no_top_margin: true
 
 /* ── Research cards ───────────────────────────── */
 .research-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.2rem;
-  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-bottom: 0.6rem;
 }
 .research-card {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.7rem;
   border: 1px solid var(--global-divider-color, #e0e0e0);
-  border-radius: 12px;
-  padding: 1.6rem 1.3rem 1.4rem;
+  border-radius: 10px;
+  padding: 0.85rem 0.9rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   background: var(--global-bg-color);
+  text-decoration: none !important;
+  color: inherit;
 }
 .research-card:hover {
   transform: translateY(-5px);
@@ -178,17 +185,21 @@ no_top_margin: true
 .research-card .rc-icon {
   font-size: 2rem;
   color: #4da6ff;
-  margin-bottom: 0.85rem;
-  display: block;
+  flex-shrink: 0;
 }
 .research-card h5 {
   font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+@media (max-width: 700px) {
+  .research-card { flex: 1 1 100%; }
+  .research-card h5 { white-space: normal; }
 }
 .research-card p {
-  font-size: 0.86rem;
-  color: var(--global-text-color-light, #666);
+  font-size: 2rem;
+  color: var(--global-text-color-light, #0022fe);
   line-height: 1.55;
   margin: 0 0 0.6rem;
 }
@@ -258,6 +269,64 @@ no_top_margin: true
   background: #4da6ff !important;
   color: #fff !important;
 }
+
+/* ── Selected Publications (homepage): cover + journal only, 6 per row ── */
+.selected-compact {
+  margin-top: 0 !important;
+}
+.selected-compact ol.bibliography {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 1.2rem;
+  row-gap: 0.7rem;
+  list-style: none;
+  padding: 0;
+}
+.selected-compact ol.bibliography li {
+  margin-bottom: 0;
+}
+.compact-pub-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none !important;
+  transition: transform 0.2s ease;
+}
+.compact-pub-card:hover {
+  transform: translateY(-4px);
+}
+.compact-pub-card .preview {
+  width: 100%;
+  aspect-ratio: 210 / 297;
+  object-fit: contain;
+  background: var(--global-bg-color);
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.compact-pub-journal {
+  font-size: 1.0rem;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  color: var(--global-text-color);
+  margin-top: 0.01rem;
+  line-height: 1.3;
+}
+.compact-pub-card:hover .compact-pub-journal {
+  color: #1a7fff;
+}
+.compact-pub-year {
+  font-size: 1.0rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--global-text-color-light, #888);
+  line-height: 1.3;
+}
+@media (max-width: 900px) {
+  .selected-compact ol.bibliography { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 460px) {
+  .selected-compact ol.bibliography { grid-template-columns: repeat(2, 1fr); }
+}
 </style>
 
 <!-- ── HERO ─────────────────────────────────────── -->
@@ -273,53 +342,25 @@ no_top_margin: true
   </div>
 </div>
 
-<!-- ── NAV BUTTONS ────────────────────────────────── -->
-<div class="hero-buttons">
-  <a href="/research/" class="btn-hp"><i class="ti ti-flask"></i> Research</a>
-  <a href="/publications/" class="btn-hp"><i class="ti ti-file-text"></i> Publications</a>
-  <a href="/members/" class="btn-hp"><i class="ti ti-users"></i> Team</a>
-  <a href="/news/" class="btn-hp"><i class="ti ti-news"></i> News</a>
-  <a href="/resources/" class="btn-hp"><i class="ti ti-tool"></i> Resources</a>
-  <a href="/join/" class="btn-hp"><i class="ti ti-user-plus"></i> Join Us</a>
-</div>
-
 <!-- ── RESEARCH ───────────────────────────────────── -->
 <div class="sec-title">Research Focus</div>
 
 <div class="research-grid">
 
-  <div class="research-card">
+  <a class="research-card" href="/research/">
     <i class="rc-icon ti ti-brain"></i>
     <h5>AI for Drug Delivery</h5>
-    <p>Foundation model-powered and deep learning platforms — including LUMI-lab and AGILE — that autonomously close the loop between computational prediction and experimental validation to accelerate ionizable lipid discovery.</p>
-    <div class="rc-tags">
-      <span class="rc-tag">Deep Learning</span>
-      <span class="rc-tag">Self-Driving Lab</span>
-      <span class="rc-tag">Foundation Model</span>
-    </div>
-  </div>
+  </a>
 
-  <div class="research-card">
+  <a class="research-card" href="/research/">
     <i class="rc-icon ti ti-dna"></i>
     <h5>Cancer Immunotherapy & Gene Therapy</h5>
-    <p>Nucleic acid delivery systems operating on two fronts: reprogramming the immune system to eradicate pediatric tumors (IL-12 circRNA, ICD), and correcting disease-causing mutations in rare genetic diseases (base editing, genome editing).</p>
-    <div class="rc-tags">
-      <span class="rc-tag">Cancer Immunotherapy</span>
-      <span class="rc-tag">Gene Editing</span>
-      <span class="rc-tag">Rare Disease</span>
-    </div>
-  </div>
+  </a>
 
-  <div class="research-card">
+  <a class="research-card" href="/research/">
     <i class="rc-icon ti ti-flask"></i>
     <h5>Lipid Nanoparticle Engineering</h5>
-    <p>Rational design and high-throughput combinatorial chemistry to build structurally diverse ionizable lipids — including biodegradable variants via Passerini reaction — for organ-selective nucleic acid delivery.</p>
-    <div class="rc-tags">
-      <span class="rc-tag">Combinatorial Chemistry</span>
-      <span class="rc-tag">Biodegradable LNP</span>
-      <span class="rc-tag">Tissue Selectivity</span>
-    </div>
-  </div>
+  </a>
 
 
 

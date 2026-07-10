@@ -77,8 +77,8 @@ no_top_margin: true
   grid-template-columns: 80px 1fr;
   gap: 1.5rem;
   align-items: start;
-  margin-bottom: 3rem;
-  padding-bottom: 3rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 1.2rem;
   border-bottom: 1px solid var(--global-divider-color, #e8e8e8);
 }
 .area-section:last-of-type { border-bottom: none; }
@@ -118,18 +118,18 @@ no_top_margin: true
 }
 .area-highlights li {
   margin-bottom: 0;
-  flex: 1 1 220px;
+  flex: 0 1 auto;
 }
 .area-highlights details {
   height: 100%;
   padding: 0.5rem 0.9rem;
-  border: 1px solid var(--global-divider-color, #e5e5e5);
+  border: 1px solid #0a2a4a;
   border-radius: 10px;
 }
 .area-highlights summary {
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--global-text-color);
+  color: #0a2a4a;
   cursor: pointer;
   padding: 0.3rem 0;
   list-style: none;
@@ -212,7 +212,7 @@ a.pub-pill:hover {
   </div>
   <div class="area-body">
     <h3>AI for Drug Delivery</h3>
-    <p>We build foundation model-powered and deep learning platforms that autonomously close the loop between computational prediction and experimental validation — dramatically accelerating the discovery of ionizable lipids for nucleic acid delivery.</p>
+    <p>We build foundation model-powered and deep learning platforms that autonomously close the loop between computational prediction and experimental validation, dramatically accelerating the discovery of ionizable lipids for nucleic acid delivery.</p>
     <ul class="area-highlights">
       <li><details><summary>LUMI-lab</summary><div class="detail-text">A foundation model-driven self-driving laboratory that autonomously designs, synthesizes, and evaluates new ionizable lipid structures for mRNA delivery. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://doi.org/10.1016/j.cell.2026.01.012" target="_blank" rel="noopener">Cell 2026</a></div></div></details></li>
       <li><details><summary>AGILE Platform</summary><div class="detail-text">Active machine learning approach using deep neural networks to accelerate LNP formulation optimization. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://doi.org/10.1038/s41467-024-50619-z" target="_blank" rel="noopener">Nature Communications 2024</a></div></div></details></li>
@@ -250,3 +250,18 @@ a.pub-pill:hover {
     </ul>
   </div>
 </div>
+
+<script>
+document.querySelectorAll('.area-highlights').forEach(function (list) {
+  var items = Array.prototype.slice.call(list.querySelectorAll(':scope > li > details'));
+  items.forEach(function (d) {
+    d.addEventListener('toggle', function () {
+      items.forEach(function (other) {
+        if (other !== d) {
+          other.closest('li').style.display = d.open ? 'none' : '';
+        }
+      });
+    });
+  });
+});
+</script>

@@ -1,0 +1,22 @@
+---
+---
+<a class="compact-pub-card" href="{{ entry.website | default: entry.doi | default: entry.html | default: entry.pdf }}" target="_blank" rel="noopener">
+  {% if entry.preview %}
+    {% if entry.preview contains '://' %}
+      <img class="preview" src="{{ entry.preview }}">
+    {% else %}
+      {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+      {%
+        include figure.liquid
+        loading="eager"
+        path=entry_path
+        sizes="200px"
+        class="preview"
+        avoid_scaling=true
+        alt=entry.preview
+      %}
+    {% endif %}
+  {% endif %}
+  <div class="compact-pub-journal">{{ entry.abbr | default: entry.journal | default: entry.booktitle }}</div>
+  <div class="compact-pub-year">{{ entry.year }}</div>
+</a>
