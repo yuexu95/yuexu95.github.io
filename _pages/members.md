@@ -179,7 +179,7 @@ navbar_social: true
         <a class="pi-link pi-link-icon" href="https://orcid.org/0000-0001-7672-9170" target="_blank" rel="noopener"><i class="ai ai-orcid"></i></a>
         <a class="pi-link pi-link-icon" href="https://github.com/yuexu95" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
         <a class="pi-link pi-link-icon" href="https://www.linkedin.com/in/yuexu1995" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
-        <a class="pi-link pi-link-icon" href="https://x.com/YueXu1995" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+        <a class="pi-link pi-link-icon" href="https://x.com/Yuexulab" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
       </div>
     </div>
   </div>
