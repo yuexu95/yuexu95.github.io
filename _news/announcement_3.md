@@ -7,5 +7,3 @@ image: "assets/img/NCI_ESI.JPG"
 image_alt: "NIH NCI"
 redirect: https://www.ncicapit.org/en/
 ---
-
-Yue Xu was invited to deliver a talk at the NIH National Cancer Institute (NCI) as part of the 2026 CAP-IT Early Career Investigator Symposium.

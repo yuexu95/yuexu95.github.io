@@ -7,5 +7,3 @@ image: "assets/img/CM.png"
 image_alt: "Children's Mercy Research Institute Logo"
 redirect: https://www.childrensmercy.org/childrens-mercy-research-institute/
 ---
-
-Yue Xu will join Children's Mercy Research Institute as a **Principal Investigator** and hold a joint **Assistant Professor** appointment in the Department of Pediatrics at the University of Missouri-Kansas City and the University of Kansas Medical Center.

@@ -7,5 +7,3 @@ permalink: /news/scba-award/
 image: "assets/img/SCBA.jpg"
 image_alt: "SCBA Award"
 ---
-
-Yue Xu received the SCBA Toronto Chapter 2025 Paper Award.

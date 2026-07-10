@@ -112,10 +112,19 @@ no_top_margin: true
   list-style: none;
   padding: 0;
   margin: 0 0 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
 }
-.area-highlights li { margin-bottom: 0.3rem; }
+.area-highlights li {
+  margin-bottom: 0;
+  flex: 1 1 220px;
+}
 .area-highlights details {
-  padding-left: 0;
+  height: 100%;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--global-divider-color, #e5e5e5);
+  border-radius: 10px;
 }
 .area-highlights summary {
   font-size: 0.88rem;
@@ -178,6 +187,8 @@ a.pub-pill:hover {
 @media (max-width: 600px) {
   .area-section { grid-template-columns: 1fr; }
   .area-icon-wrap { width: 56px; height: 56px; }
+  .area-highlights { flex-direction: column; }
+  .area-highlights li { flex: 1 1 auto; }
 }
 </style>
 

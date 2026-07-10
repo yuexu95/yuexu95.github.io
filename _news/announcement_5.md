@@ -7,5 +7,3 @@ image: "assets/img/AACR_2026.webp"
 image_alt: "AACR 2026"
 redirect: https://www.aacr.org/meeting/aacr-annual-meeting-2026/
 ---
-
-Yue Xu was selected to give an invited oral presentation at the American Association for Cancer Research (AACR) Annual Meeting 2026.

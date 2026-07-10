@@ -8,4 +8,4 @@ image_alt: "Baylor College of Medicine Logo"
 redirect: https://www.bcm.edu/people-search/yue-xu-201661/
 ---
 
-Yue Xu joined Baylor College of Medicine as an Instructor and began building a high-throughput screening platform to evaluate lipid nanoparticles (LNPs) for mRNA delivery.
+
