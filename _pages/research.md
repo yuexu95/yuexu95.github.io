@@ -123,13 +123,19 @@ no_top_margin: true
 .area-highlights details {
   height: 100%;
   padding: 0.5rem 0.9rem;
-  border: 1px solid #0a2a4a;
+  border: 1.5px solid #4da6ff;
   border-radius: 10px;
+  background: rgba(77,166,255,0.08);
+  transition: all 0.2s ease;
+}
+.area-highlights details:hover {
+  border-color: #4da6ff;
+  background: rgba(77,166,255,0.12);
 }
 .area-highlights summary {
   font-size: 0.88rem;
-  font-weight: 600;
-  color: #0a2a4a;
+  font-weight: 700;
+  color: #1a7fff;
   cursor: pointer;
   padding: 0.3rem 0;
   list-style: none;
@@ -137,6 +143,7 @@ no_top_margin: true
   align-items: center;
   gap: 0.4rem;
   user-select: none;
+  letter-spacing: 0.02em;
 }
 .area-highlights summary::before {
   content: "▸";
