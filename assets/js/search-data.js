@@ -98,6 +98,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_8.html";
+            },},{id: "news-welcome-dr-qi-miao-joined-the-children-s-mercy-research-institute-as-a-senior-research-associate",
+          title: 'Welcome Dr. Qi Miao joined the Children’s Mercy Research Institute as a Senior...',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_9.html";
             },},{
         id: 'social-email',
         title: 'email',
