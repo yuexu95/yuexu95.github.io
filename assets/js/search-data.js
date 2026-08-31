@@ -103,6 +103,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_9.html";
+            },},{id: "news-welcome-yukuan-andy-pan-joined-the-children-s-mercy-research-institute-as-a-data-scientist",
+          title: 'Welcome Yukuan(Andy) Pan joined the Children’s Mercy Research Institute as a data scientist...',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_10.html";
             },},{
         id: 'social-email',
         title: 'email',
