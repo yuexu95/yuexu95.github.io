@@ -75,6 +75,32 @@ navbar_social: true
   border: none;
   display: block;
 }
+
+.tool-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.tool-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border: 1px solid #4da6ff;
+  border-radius: 20px;
+  background: transparent;
+  color: var(--global-text-color);
+  cursor: pointer;
+}
+.tool-tab:hover { background: rgba(77,166,255,0.15); }
+.tool-tab.active {
+  background: #4da6ff;
+  color: #fff;
+}
+.tool-card[hidden] { display: none; }
 </style>
 
 <div class="resource-header">
@@ -82,7 +108,12 @@ navbar_social: true
   <p>Interactive tools developed by the Xu Lab to support lipid nanoparticle research and nucleic acid delivery.</p>
 </div>
 
-<div class="tool-card">
+<div class="tool-tabs" role="tablist">
+  <button class="tool-tab active" role="tab" aria-selected="true" data-target="tool-formulation"><i class="ti ti-calculator"></i> LNP Formulation Calculator</button>
+  <button class="tool-tab" role="tab" aria-selected="false" data-target="tool-inventory"><i class="ti ti-package"></i> Lab Inventory</button>
+</div>
+
+<div class="tool-card" id="tool-formulation" role="tabpanel">
   <div class="tool-card-header">
     <i class="ti ti-calculator"></i>
     <div>
@@ -98,3 +129,33 @@ navbar_social: true
     allow="accelerometer; camera; microphone"
   ></iframe>
 </div>
+
+<div class="tool-card" id="tool-inventory" role="tabpanel" hidden>
+  <div class="tool-card-header">
+    <i class="ti ti-package"></i>
+    <div>
+      <h3>Lab Inventory</h3>
+      <p>Track reagents, lipids, and supplies stocked in the Xu Lab.</p>
+    </div>
+    <a href="https://lab-inventory-2s9.pages.dev/" target="_blank" rel="noopener">Open in full ↗</a>
+  </div>
+  <iframe
+    class="tool-embed"
+    src="https://lab-inventory-2s9.pages.dev/"
+    title="Lab Inventory"
+    loading="lazy"
+  ></iframe>
+</div>
+
+<script>
+  document.querySelectorAll('.tool-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.tool-tab').forEach(function (t) {
+        var on = t === tab;
+        t.classList.toggle('active', on);
+        t.setAttribute('aria-selected', on);
+        document.getElementById(t.dataset.target).hidden = !on;
+      });
+    });
+  });
+</script>
