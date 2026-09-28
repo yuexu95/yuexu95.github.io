@@ -1,6 +1,6 @@
 ---
 ---
-<a class="compact-pub-card" href="{{ entry.website | default: entry.doi | default: entry.html | default: entry.pdf }}" target="_blank" rel="noopener">
+<a class="compact-pub-card{% if entry.abbr == "Cell" %} pin-first{% endif %}" href="{{ entry.website | default: entry.doi | default: entry.html | default: entry.pdf }}" target="_blank" rel="noopener">
   {% if entry.preview %}
     {% if entry.preview contains '://' %}
       <img class="preview" src="{{ entry.preview }}">

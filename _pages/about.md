@@ -270,13 +270,13 @@ no_top_margin: true
   color: #fff !important;
 }
 
-/* ── Selected Publications (homepage): cover + journal only, 6 per row ── */
+/* ── Selected Publications (homepage): cover + journal only, 5 per row, Cell first ── */
 .selected-compact {
   margin-top: 0 !important;
 }
 .selected-compact ol.bibliography {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   column-gap: 1.2rem;
   row-gap: 0.7rem;
   list-style: none;
@@ -284,6 +284,9 @@ no_top_margin: true
 }
 .selected-compact ol.bibliography li {
   margin-bottom: 0;
+}
+.selected-compact ol.bibliography li:has(.pin-first) {
+  order: -1;
 }
 .compact-pub-card {
   display: flex;
