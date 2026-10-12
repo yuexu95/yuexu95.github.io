@@ -13,161 +13,149 @@ no_top_margin: true
 .post-header { display: none; }
 .post > article { margin-top: 0 !important; padding-top: 0 !important; }
 
+/* ── Hero ── */
 .research-hero {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 2.5rem;
-  align-items: center;
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(135deg, #0a2a4a 0%, #154360 100%);
   border-radius: 14px;
-  padding: 1.5rem 2rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  overflow: hidden;
-  position: relative;
+  padding: 2rem 2.2rem;
+  margin: 1rem 0 2.5rem;
 }
 .research-hero::after {
   content: "";
   position: absolute;
-  right: -60px; top: -60px;
-  width: 220px; height: 220px;
+  right: -70px; top: -70px;
+  width: 240px; height: 240px;
   border-radius: 50%;
-  background: rgba(77,166,255,0.07);
+  background: rgba(77,166,255,0.08);
+  pointer-events: none;
 }
-.research-hero-label {
-  text-align: center;
-  border-right: 1px solid rgba(255,255,255,0.15);
-  padding-right: 2.5rem;
-}
-.research-hero-label i {
-  font-size: 3rem;
-  color: #4da6ff;
-  display: block;
-  margin-bottom: 0.8rem;
-}
-.research-hero-label span {
-  display: block;
+.research-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #a9cce3;
-  line-height: 1.4;
+  margin-bottom: 0.7rem;
 }
-.research-hero-text h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 0.8rem;
-  margin-top: 0;
+.research-eyebrow i { font-size: 1.15rem; color: #4da6ff; }
+.research-hero h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 0.8rem;
 }
-.research-hero-text p {
+.research-hero p {
   color: #c5dff5;
-  font-size: 0.95rem;
+  font-size: 0.97rem;
   line-height: 1.8;
   margin: 0;
-}
-@media (max-width: 600px) {
-  .research-hero { grid-template-columns: 1fr; }
-  .research-hero-label { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding-right: 0; padding-bottom: 1.5rem; }
+  max-width: 68ch;
 }
 
-.area-section {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 1.5rem;
-  align-items: start;
-  margin-bottom: 1.2rem;
-  padding-bottom: 1.2rem;
+.sec-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 3px solid #4da6ff;
+  display: inline-block;
+}
+
+/* ── Research areas ── */
+.area {
+  scroll-margin-top: 80px;
+  margin-bottom: 2.4rem;
+  padding-bottom: 2.4rem;
   border-bottom: 1px solid var(--global-divider-color, #e8e8e8);
 }
-.area-section:last-of-type { border-bottom: none; }
-.area-icon-wrap {
-  width: 72px;
-  height: 72px;
-  border-radius: 16px;
+.area:last-of-type { border-bottom: none; padding-bottom: 0; }
+.area-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+.area-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 14px;
   background: linear-gradient(135deg, #0a2a4a, #1a5276);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
 }
-.area-icon-wrap i {
-  font-size: 2rem;
+.area-icon i { font-size: 1.6rem; color: #4da6ff; }
+.area-num {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   color: #4da6ff;
+  margin-bottom: 0.1rem;
 }
-.area-body h3 {
+.area-head h3 {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 0.6rem;
+  margin: 0;
   color: var(--global-text-color);
 }
-.area-body p {
-  font-size: 0.93rem;
-  line-height: 1.7;
+.area-desc {
+  font-size: 0.95rem;
+  line-height: 1.75;
   color: var(--global-text-color-light, #555);
-  margin-bottom: 1rem;
+  margin: 0 0 1.2rem;
 }
-.area-highlights {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1rem 0;
+
+/* ── Project cards ── */
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.proj {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem;
+  flex-direction: column;
+  border: 1px solid var(--global-divider-color, #e0e0e0);
+  border-top: 3px solid #4da6ff;
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  background: rgba(77,166,255,0.04);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
-.area-highlights li {
-  margin-bottom: 0;
-  flex: 0 1 auto;
+.proj:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
 }
-.area-highlights details {
-  height: 100%;
-  padding: 0.5rem 0.9rem;
-  border: 1.5px solid #4da6ff;
-  border-radius: 10px;
-  background: rgba(77,166,255,0.08);
-  transition: all 0.2s ease;
-}
-.area-highlights details:hover {
-  border-color: #4da6ff;
-  background: rgba(77,166,255,0.12);
-}
-.area-highlights summary {
-  font-size: 0.88rem;
+.proj h4 {
+  font-size: 1rem;
   font-weight: 700;
-  color: #1a7fff;
-  cursor: pointer;
-  padding: 0.3rem 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  user-select: none;
-  letter-spacing: 0.02em;
+  margin: 0 0 0.45rem;
+  color: var(--global-text-color);
 }
-.area-highlights summary::before {
-  content: "▸";
-  color: #4da6ff;
-  font-size: 0.75rem;
-  transition: transform 0.2s ease;
-  flex-shrink: 0;
-}
-.area-highlights details[open] summary::before { transform: rotate(90deg); }
-.area-highlights summary::-webkit-details-marker { display: none; }
-.area-highlights .detail-text {
-  font-size: 0.85rem;
-  color: var(--global-text-color-light, #666);
+.proj p {
+  font-size: 0.86rem;
   line-height: 1.6;
-  padding: 0.4rem 0 0.5rem;
+  color: var(--global-text-color-light, #666);
+  margin: 0 0 0.9rem;
 }
 .pub-pills {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
+  margin-top: auto;
 }
 .pub-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
   font-size: 0.75rem;
-  padding: 0.2rem 0.65rem;
+  padding: 0.22rem 0.7rem;
   border-radius: 20px;
   border: 1px solid #4da6ff;
   color: #1a7fff;
@@ -176,99 +164,102 @@ no_top_margin: true
   text-decoration: none;
   transition: all 0.2s ease;
 }
+.pub-pill i { font-size: 0.85rem; }
 a.pub-pill:hover {
   background: #4da6ff;
   color: #fff;
   text-decoration: none;
 }
 
-.sec-title {
-  font-size: 1.55rem;
-  font-weight: 700;
-  margin-bottom: 1.8rem;
-  padding-bottom: 0.45rem;
-  border-bottom: 3px solid #4da6ff;
-  display: inline-block;
-}
-
 @media (max-width: 600px) {
-  .area-section { grid-template-columns: 1fr; }
-  .area-icon-wrap { width: 56px; height: 56px; }
-  .area-highlights { flex-direction: column; }
-  .area-highlights li { flex: 1 1 auto; }
+  .research-hero { padding: 1.5rem 1.3rem; }
+  .research-hero h2 { font-size: 1.25rem; }
+  .area-icon { width: 44px; height: 44px; }
+  .area-icon i { font-size: 1.35rem; }
 }
 </style>
 
 <div class="research-hero">
-  <div class="research-hero-label">
-    <i class="ti ti-dna-2"></i>
-    <span>Our Research<br>Vision</span>
-  </div>
-  <div class="research-hero-text">
-    <h2>Precision Gene Medicine for Children</h2>
-    <p style="text-align: justify;">Children with cancer and life-threatening genetic diseases deserve better therapies, ones that are precise, safe, and designed for them from the start. At the Xu Lab, we engineer AI-driven lipid nanoparticle platforms to deliver nucleic acid medicines, plasmid DNA, mRNA, siRNA, circular RNA, and gene editors, directly to pediatric tumors and diseased tissues. By uniting rational chemistry, machine learning, and high-throughput biology, we aim to accelerate the translation of next-generation gene therapies into treatments that give children and families real hope.</p>
-  </div>
+  <div class="research-eyebrow"><i class="ti ti-dna-2"></i>Our Research Vision</div>
+  <h2>Precision Gene Medicine for Children</h2>
+  <p>Children with cancer and life-threatening genetic diseases deserve better therapies, ones that are precise, safe, and designed for them from the start. At the Xu Lab, we engineer AI-driven lipid nanoparticle platforms to deliver nucleic acid medicines, plasmid DNA, mRNA, siRNA, circular RNA, and gene editors, directly to pediatric tumors and diseased tissues. By uniting rational chemistry, machine learning, and high-throughput biology, we aim to accelerate the translation of next-generation gene therapies into treatments that give children and families real hope.</p>
 </div>
 
 <div class="sec-title">Research Areas</div>
 
 <!-- Area 1 -->
-<div class="area-section">
-  <div class="area-icon-wrap">
-    <i class="ti ti-brain"></i>
+<section class="area" id="ai-delivery">
+  <div class="area-head">
+    <div class="area-icon"><i class="ti ti-brain"></i></div>
+    <div>
+      <span class="area-num">01</span>
+      <h3>AI for Drug Delivery</h3>
+    </div>
   </div>
-  <div class="area-body">
-    <h3>AI for Drug Delivery</h3>
-    <p>We build foundation model-powered and deep learning platforms that autonomously close the loop between computational prediction and experimental validation, dramatically accelerating the discovery of ionizable lipids for nucleic acid delivery.</p>
-    <ul class="area-highlights">
-      <li><details><summary>LUMI-lab</summary><div class="detail-text">A foundation model-driven self-driving laboratory that autonomously designs, synthesizes, and evaluates new ionizable lipid structures for mRNA delivery. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://doi.org/10.1016/j.cell.2026.01.012" target="_blank" rel="noopener">Cell 2026</a></div></div></details></li>
-      <li><details><summary>AGILE Platform</summary><div class="detail-text">Active machine learning approach using deep neural networks to accelerate LNP formulation optimization. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://doi.org/10.1038/s41467-024-50619-z" target="_blank" rel="noopener">Nature Communications 2024</a></div></div></details></li>
-      <li><details><summary>Multi-objective AI</summary><div class="detail-text">Reinforcement learning framework for simultaneous optimization of potency, tissue selectivity, and tolerability. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://www.nature.com/articles/s41587-026-03109-0" target="_blank" rel="noopener">Nature Biotechnology 2026</a></div></div></details></li>
-    </ul>
+  <p class="area-desc">We build foundation model-powered and deep learning platforms that autonomously close the loop between computational prediction and experimental validation, dramatically accelerating the discovery of ionizable lipids for nucleic acid delivery.</p>
+  <div class="proj-grid">
+    <div class="proj">
+      <h4>LUMI-lab</h4>
+      <p>A foundation model-driven self-driving laboratory that autonomously designs, synthesizes, and evaluates new ionizable lipid structures for mRNA delivery.</p>
+      <div class="pub-pills"><a class="pub-pill" href="https://doi.org/10.1016/j.cell.2026.01.012" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Cell 2026</a></div>
+    </div>
+    <div class="proj">
+      <h4>AGILE Platform</h4>
+      <p>Active machine learning approach using deep neural networks to accelerate LNP formulation optimization.</p>
+      <div class="pub-pills"><a class="pub-pill" href="https://doi.org/10.1038/s41467-024-50619-z" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Nature Communications 2024</a></div>
+    </div>
+    <div class="proj">
+      <h4>Multi-objective AI</h4>
+      <p>Reinforcement learning framework for simultaneous optimization of potency, tissue selectivity, and tolerability.</p>
+      <div class="pub-pills"><a class="pub-pill" href="https://www.nature.com/articles/s41587-026-03109-0" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Nature Biotechnology 2026</a></div>
+    </div>
   </div>
-</div>
+</section>
 
 <!-- Area 2 -->
-<div class="area-section">
-  <div class="area-icon-wrap">
-    <i class="ti ti-dna"></i>
+<section class="area" id="immunotherapy">
+  <div class="area-head">
+    <div class="area-icon"><i class="ti ti-dna"></i></div>
+    <div>
+      <span class="area-num">02</span>
+      <h3>Cancer Immunotherapy &amp; Gene Therapy</h3>
+    </div>
   </div>
-  <div class="area-body">
-    <h3>Cancer Immunotherapy & Gene Therapy</h3>
-    <p>We engineer nucleic acid delivery systems operating on two fronts: reprogramming the immune system to eradicate pediatric tumors, and correcting disease-causing mutations in children with rare genetic diseases.</p>
-    <ul class="area-highlights">
-      <li><details><summary>Cancer immunotherapy</summary><div class="detail-text">Tumor-tailored LNPs for IL-12 circular RNA delivery to activate anti-tumor immunity, and a modular mRNA platform for programmable induction of tumour-specific immunogenic cell death. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://doi.org/10.1002/adma.202400307" target="_blank" rel="noopener">Advanced Materials 2024</a><a class="pub-pill" href="https://www.nature.com/articles/s41565-025-02045-5" target="_blank" rel="noopener">Nature Nanotechnology 2025</a></div></div></details></li>
-      <li><details><summary>Gene editing for rare disease</summary><div class="detail-text">Inhaled LNPs delivering base editors to correct lung mutations, and biodegradable LNPs for intrathecal genome editing targeting neurological diseases. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://www.nature.com/articles/s41563-026-02555-0" target="_blank" rel="noopener">Nature Materials 2026</a><a class="pub-pill" href="https://doi.org/10.1016/j.mattod.2025.11.032" target="_blank" rel="noopener">Materials Today 2025</a></div></div></details></li>
-    </ul>
+  <p class="area-desc">We engineer nucleic acid delivery systems operating on two fronts: reprogramming the immune system to eradicate pediatric tumors, and correcting disease-causing mutations in children with rare genetic diseases.</p>
+  <div class="proj-grid">
+    <div class="proj">
+      <h4>Cancer immunotherapy</h4>
+      <p>Tumor-tailored LNPs for IL-12 circular RNA delivery to activate anti-tumor immunity, and a modular mRNA platform for programmable induction of tumour-specific immunogenic cell death.</p>
+      <div class="pub-pills"><a class="pub-pill" href="https://doi.org/10.1002/adma.202400307" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Advanced Materials 2024</a><a class="pub-pill" href="https://www.nature.com/articles/s41565-025-02045-5" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Nature Nanotechnology 2025</a></div>
+    </div>
+    <div class="proj">
+      <h4>Gene editing for rare disease</h4>
+      <p>Inhaled LNPs delivering base editors to correct lung mutations, and biodegradable LNPs for intrathecal genome editing targeting neurological diseases.</p>
+      <div class="pub-pills"><a class="pub-pill" href="https://www.nature.com/articles/s41563-026-02555-0" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Nature Materials 2026</a><a class="pub-pill" href="https://doi.org/10.1016/j.mattod.2025.11.032" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Materials Today 2025</a></div>
+    </div>
   </div>
-</div>
+</section>
 
 <!-- Area 3 -->
-<div class="area-section">
-  <div class="area-icon-wrap">
-    <i class="ti ti-flask"></i>
+<section class="area" id="lnp-engineering">
+  <div class="area-head">
+    <div class="area-icon"><i class="ti ti-flask"></i></div>
+    <div>
+      <span class="area-num">03</span>
+      <h3>Lipid Nanoparticle Engineering</h3>
+    </div>
   </div>
-  <div class="area-body">
-    <h3>Lipid Nanoparticle Engineering</h3>
-    <p>We apply rational design principles and high-throughput combinatorial chemistry to synthesize structurally diverse ionizable lipids with tunable organ tropism, biodegradability, and endosomal escape efficiency.</p>
-    <ul class="area-highlights">
-      <li><details><summary>Passerini-3CR</summary><div class="detail-text">Modular, one-pot multicomponent synthesis of biodegradable ionizable lipids for mRNA delivery. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://doi.org/10.1073/pnas.2409572122" target="_blank" rel="noopener">PNAS 2025</a></div></div></details></li>
-      <li><details><summary>Ugi-3CR</summary><div class="detail-text">High-throughput synthesis libraries enabling rapid SAR exploration across lipid tail, head group, and linker space. <div class="pub-pills" style="margin-top:0.4rem;"><a class="pub-pill" href="https://doi.org/10.1073/pnas.2309472120" target="_blank" rel="noopener">PNAS 2023</a></div></div></details></li>
-    </ul>
+  <p class="area-desc">We apply rational design principles and high-throughput combinatorial chemistry to synthesize structurally diverse ionizable lipids with tunable organ tropism, biodegradability, and endosomal escape efficiency.</p>
+  <div class="proj-grid">
+    <div class="proj">
+      <h4>Passerini-3CR</h4>
+      <p>Modular, one-pot multicomponent synthesis of biodegradable ionizable lipids for mRNA delivery.</p>
+      <div class="pub-pills"><a class="pub-pill" href="https://doi.org/10.1073/pnas.2409572122" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>PNAS 2025</a></div>
+    </div>
+    <div class="proj">
+      <h4>Ugi-3CR</h4>
+      <p>High-throughput synthesis libraries enabling rapid SAR exploration across lipid tail, head group, and linker space.</p>
+      <div class="pub-pills"><a class="pub-pill" href="https://doi.org/10.1073/pnas.2309472120" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>PNAS 2023</a></div>
+    </div>
   </div>
-</div>
-
-<script>
-document.querySelectorAll('.area-highlights').forEach(function (list) {
-  var items = Array.prototype.slice.call(list.querySelectorAll(':scope > li > details'));
-  items.forEach(function (d) {
-    d.addEventListener('toggle', function () {
-      items.forEach(function (other) {
-        if (other !== d) {
-          other.closest('li').style.display = d.open ? 'none' : '';
-        }
-      });
-    });
-  });
-});
-</script>
+</section>

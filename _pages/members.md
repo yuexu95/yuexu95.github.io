@@ -41,17 +41,18 @@ navbar_social: true
   display: inline-block;
 }
 
-/* ── People grid (3 cards per row, fixed size) ── */
+/* ── People list (one card per row: photo left, details right) ── */
 .people-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
   margin-bottom: 3rem;
 }
 .pi-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 1.8rem;
   width: 100%;
   min-height: 0;
   border: 1px solid var(--global-divider-color, #e0e0e0);
@@ -62,21 +63,30 @@ navbar_social: true
   overflow-y: auto;
 }
 .pi-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.09); }
-.pi-left { text-align: center; margin-bottom: 1rem; }
-.pi-info { width: 100%; display: flex; flex-direction: column; gap: 0.6rem; }
+/* photo | text | icons — previous positions open beneath the text */
+.pi-body {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+.pi-info { display: contents; }
+.pi-prev-list { grid-column: 1 / -1; }
 .pi-photo {
-  width: 108px;
-  height: 108px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   display: block;
   object-fit: cover;
-  margin: 0 auto;
+  flex-shrink: 0;
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 .pi-name {
   font-size: 1.1rem;
   font-weight: 800;
-  margin: 0.8rem 0 0.2rem;
+  margin: 0 0 0.2rem;
 }
 .pi-role {
   font-size: 0.85rem;
@@ -96,37 +106,23 @@ navbar_social: true
   margin: 0.3rem 0 0;
   line-height: 1.45;
 }
-.pi-prev {
-  margin-top: 0.6rem;
+.pi-prev-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.2rem 0 0;
   font-size: 0.8rem;
   color: var(--global-text-color-light, #888);
 }
-.pi-prev summary {
+.pi-prev-list li { margin: 0.2rem 0; }
+.pi-prev-toggle {
+  background: none;
   cursor: pointer;
-  list-style: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  color: #4da6ff;
-  font-weight: 600;
-  user-select: none;
 }
-.pi-prev summary::-webkit-details-marker { display: none; }
-.pi-prev summary::after {
-  content: "\25BE";
-  transition: transform 0.2s ease;
-}
-.pi-prev[open] summary::after { transform: rotate(180deg); }
-.pi-prev ul {
-  list-style: none;
-  padding: 0;
-  margin: 0.4rem 0 0;
-}
-.pi-prev li { margin: 0.2rem 0; }
+.pi-prev-toggle i { transition: transform 0.2s ease; }
+.pi-prev-toggle[aria-expanded="true"] i { transform: rotate(180deg); }
 .pi-links {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 0.4rem;
 }
 .pi-link {
@@ -161,8 +157,10 @@ navbar_social: true
   pointer-events: none;
 }
 
-/* ── Join Us card (3rd grid slot) ── */
+/* ── Join Us card ── */
 .join-card {
+  flex-direction: column;
+  gap: 0;
   justify-content: center;
   text-align: center;
   border-style: dashed;
@@ -183,13 +181,10 @@ navbar_social: true
   font-weight: 600;
 }
 
-@media (max-width: 980px) {
-  .people-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
 @media (max-width: 620px) {
-  .people-grid { grid-template-columns: 1fr; }
-  .pi-card { padding: 1.6rem; min-height: 0; }
+  .pi-card { flex-direction: column; text-align: center; gap: 1rem; }
+  .pi-body { grid-template-columns: 1fr; row-gap: 0.8rem; }
+  .pi-links { justify-content: center; }
 }
 </style>
 
@@ -197,24 +192,17 @@ navbar_social: true
 
 <div class="people-grid">
   <div class="pi-card">
+    <img class="pi-photo" src="/assets/img/prof_pic.jpg" alt="Yue Xu">
+    <div class="pi-body">
     <div class="pi-left">
-      <img class="pi-photo" src="/assets/img/prof_pic.jpg" alt="Yue Xu">
       <h3 class="pi-name">Yue Xu, Ph.D.</h3>
       <p class="pi-role">Principal Investigator</p>
-      <p class="pi-affil">Children's Mercy Research Institute (CMRI)</p>
+      <p class="pi-affil">Children's Mercy Research Institute</p>
       <p class="pi-affil">Assistant Professor, UMKC School of Medicine &amp; School of Pharmacy</p>
-      <details class="pi-prev">
-        <summary>Previous positions</summary>
-        <ul>
-          <li>Instructor, Baylor College of Medicine</li>
-          <li>Postdoctoral Fellow, PRiME–UHN, University of Toronto</li>
-          <li>Ph.D., China Pharmaceutical University</li>
-        </ul>
-      </details>
-
     </div>
     <div class="pi-info">
       <div class="pi-links">
+        <button type="button" class="pi-link pi-link-icon pi-prev-toggle" aria-expanded="false" aria-label="Previous positions" title="Previous positions"><i class="fa-solid fa-chevron-down"></i></button>
         <a class="pi-link pi-link-icon" href="mailto:yxu@cmh.edu"><i class="fa-solid fa-envelope"></i></a>
         <a class="pi-link pi-link-icon" href="https://scholar.google.com/citations?user=xJDpDu4AAAAJ&hl" target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i></a>
         <a class="pi-link pi-link-icon" href="https://orcid.org/0000-0001-7672-9170" target="_blank" rel="noopener"><i class="ai ai-orcid"></i></a>
@@ -222,26 +210,26 @@ navbar_social: true
         <a class="pi-link pi-link-icon" href="https://www.linkedin.com/in/yuexu1995" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
         <a class="pi-link pi-link-icon" href="https://x.com/Yuexulab" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
       </div>
+      <ul class="pi-prev-list" hidden>
+        <li>Instructor, Baylor College of Medicine</li>
+        <li>Postdoctoral Fellow, PRiME–UHN, University of Toronto</li>
+        <li>Ph.D., China Pharmaceutical University</li>
+      </ul>
+    </div>
     </div>
   </div>
 
   <div class="pi-card">
+    <img class="pi-photo" src="/assets/img/Qi Miao.jpg" alt="Qi Miao">
+    <div class="pi-body">
     <div class="pi-left">
-      <img class="pi-photo" src="/assets/img/Qi Miao.jpg" alt="Qi Miao">
       <h3 class="pi-name">Qi Miao, Ph.D.</h3>
       <p class="pi-role">Senior Research Associate</p>
-      <p class="pi-affil">Children's Mercy Research Institute (CMRI)</p>
-      <details class="pi-prev">
-        <summary>Previous positions</summary>
-        <ul>
-          <li>Postdoc, Baylor College of Medicine</li>
-          <li>Ph.D., China Pharmaceutical University</li>
-        </ul>
-      </details>
-
+      <p class="pi-affil">Children's Mercy Research Institute</p>
     </div>
     <div class="pi-info">
       <div class="pi-links">
+        <button type="button" class="pi-link pi-link-icon pi-prev-toggle" aria-expanded="false" aria-label="Previous positions" title="Previous positions"><i class="fa-solid fa-chevron-down"></i></button>
         <span class="pi-link pi-link-icon pi-link-disabled"><i class="fa-solid fa-envelope"></i></span>
         <span class="pi-link pi-link-icon pi-link-disabled"><i class="ai ai-google-scholar"></i></span>
         <a class="pi-link pi-link-icon" href="https://orcid.org/0000-0003-4250-2239" target="_blank" rel="noopener"><i class="ai ai-orcid"></i></a>
@@ -249,25 +237,25 @@ navbar_social: true
         <a class="pi-link pi-link-icon" href="https://www.linkedin.com/in/qi-miao-175556259/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
         <span class="pi-link pi-link-icon pi-link-disabled"><i class="fa-brands fa-x-twitter"></i></span>
       </div>
+      <ul class="pi-prev-list" hidden>
+        <li>Postdoc, Baylor College of Medicine</li>
+        <li>Ph.D., China Pharmaceutical University</li>
+      </ul>
+    </div>
     </div>
   </div>
 
   <div class="pi-card">
+    <img class="pi-photo" src="/assets/img/Yukuan.jpg" alt="Yu-Kuan Pan">
+    <div class="pi-body">
     <div class="pi-left">
-      <img class="pi-photo" src="/assets/img/Yukuan.jpg" alt="Yu-Kuan Pan">
       <h3 class="pi-name">Yu-Kuan (Andy) Pan, M.S.</h3>
       <p class="pi-role">Bioinformatics Scientist</p>
-      <p class="pi-affil">Children's Mercy Research Institute (CMRI)</p>
-      <details class="pi-prev">
-        <summary>Previous positions</summary>
-        <ul>
-          <li>M.S., UTHealth Houston</li>
-          <li>B.S., University of Maryland</li>
-        </ul>
-      </details>
+      <p class="pi-affil">Children's Mercy Research Institute</p>
     </div>
     <div class="pi-info">
       <div class="pi-links">
+        <button type="button" class="pi-link pi-link-icon pi-prev-toggle" aria-expanded="false" aria-label="Previous positions" title="Previous positions"><i class="fa-solid fa-chevron-down"></i></button>
         <a class="pi-link pi-link-icon" href="mailto:andypan0214@gmail.com"><i class="fa-solid fa-envelope"></i></a>
         <span class="pi-link pi-link-icon pi-link-disabled"><i class="ai ai-google-scholar"></i></span>
         <span class="pi-link pi-link-icon pi-link-disabled"><i class="ai ai-orcid"></i></span>
@@ -275,6 +263,11 @@ navbar_social: true
         <a class="pi-link pi-link-icon" href="https://www.linkedin.com/in/yukuanpan0214" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
         <span class="pi-link pi-link-icon pi-link-disabled"><i class="fa-brands fa-x-twitter"></i></span>
       </div>
+      <ul class="pi-prev-list" hidden>
+        <li>M.S., UTHealth Houston</li>
+        <li>B.S., University of Maryland</li>
+      </ul>
+    </div>
     </div>
   </div>
 
@@ -285,5 +278,16 @@ navbar_social: true
     <a href="/join/" class="pi-link">See open positions →</a>
   </div>
 </div>
+
+<script>
+  document.querySelectorAll(".pi-prev-toggle").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var list = btn.closest(".pi-info").querySelector(".pi-prev-list");
+      var open = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!open));
+      list.hidden = open;
+    });
+  });
+</script>
 
 [def]: ttps://www.linkedin.com/in/yuexu199

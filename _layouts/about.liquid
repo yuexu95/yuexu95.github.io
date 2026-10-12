@@ -50,9 +50,12 @@ layout: default
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
-      </h2>
+      <div class="sec-head sec-head-pubs">
+        <h2>
+          <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+        </h2>
+        <a class="sec-more" href="{{ '/publications/' | relative_url }}">All publications →</a>
+      </div>
       {% include selected_papers.liquid %}
     {% endif %}
 
