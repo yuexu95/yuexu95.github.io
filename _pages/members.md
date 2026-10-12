@@ -90,6 +90,39 @@ navbar_social: true
   color: var(--global-text-color-light, #888);
   margin: 0.3rem 0 0;
 }
+.pi-affil {
+  font-size: 0.82rem;
+  color: var(--global-text-color, #333);
+  margin: 0.3rem 0 0;
+  line-height: 1.45;
+}
+.pi-prev {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light, #888);
+}
+.pi-prev summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #4da6ff;
+  font-weight: 600;
+  user-select: none;
+}
+.pi-prev summary::-webkit-details-marker { display: none; }
+.pi-prev summary::after {
+  content: "\25BE";
+  transition: transform 0.2s ease;
+}
+.pi-prev[open] summary::after { transform: rotate(180deg); }
+.pi-prev ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+}
+.pi-prev li { margin: 0.2rem 0; }
 .pi-links {
   display: flex;
   flex-wrap: nowrap;
@@ -168,8 +201,16 @@ navbar_social: true
       <img class="pi-photo" src="/assets/img/prof_pic.jpg" alt="Yue Xu">
       <h3 class="pi-name">Yue Xu, Ph.D.</h3>
       <p class="pi-role">Principal Investigator</p>
-    <p class="pi-edu">Instructor, Baylor College of Medicine</p>
-    <p class="pi-edu">Postdoc Fellowship, University of Toronto</p>
+      <p class="pi-affil">Children's Mercy Research Institute (CMRI)</p>
+      <p class="pi-affil">Assistant Professor, UMKC School of Medicine &amp; School of Pharmacy</p>
+      <details class="pi-prev">
+        <summary>Previous positions</summary>
+        <ul>
+          <li>Instructor, Baylor College of Medicine</li>
+          <li>Postdoctoral Fellow, PRiME–UHN, University of Toronto</li>
+          <li>Ph.D., China Pharmaceutical University</li>
+        </ul>
+      </details>
 
     </div>
     <div class="pi-info">
@@ -189,8 +230,14 @@ navbar_social: true
       <img class="pi-photo" src="/assets/img/Qi Miao.jpg" alt="Qi Miao">
       <h3 class="pi-name">Qi Miao, Ph.D.</h3>
       <p class="pi-role">Senior Research Associate</p>
-      <p class="pi-edu">Postdoc, Baylor College of Medicine</p>
-      <p class="pi-edu">Ph.D., China Pharmaceutical University</p>
+      <p class="pi-affil">Children's Mercy Research Institute (CMRI)</p>
+      <details class="pi-prev">
+        <summary>Previous positions</summary>
+        <ul>
+          <li>Postdoc, Baylor College of Medicine</li>
+          <li>Ph.D., China Pharmaceutical University</li>
+        </ul>
+      </details>
 
     </div>
     <div class="pi-info">
@@ -210,8 +257,14 @@ navbar_social: true
       <img class="pi-photo" src="/assets/img/Yukuan.jpg" alt="Yu-Kuan Pan">
       <h3 class="pi-name">Yu-Kuan (Andy) Pan, M.S.</h3>
       <p class="pi-role">Bioinformatics Scientist</p>
-      <p class="pi-edu">M.S., UTHealth Houston</p>
-      <p class="pi-edu">B.S., University of Maryland</p>
+      <p class="pi-affil">Children's Mercy Research Institute (CMRI)</p>
+      <details class="pi-prev">
+        <summary>Previous positions</summary>
+        <ul>
+          <li>M.S., UTHealth Houston</li>
+          <li>B.S., University of Maryland</li>
+        </ul>
+      </details>
     </div>
     <div class="pi-info">
       <div class="pi-links">
