@@ -22,6 +22,8 @@
       %}
     {% endif %}
   {% endif %}
-  <div class="compact-pub-journal">{{ entry.abbr | default: entry.journal | default: entry.booktitle }}</div>
-  <div class="compact-pub-year">{{ entry.year }}</div>
+  <div class="compact-pub-journal">
+    {{- entry.abbr | default: entry.journal | default: entry.booktitle }},
+    <span class="compact-pub-year">{{ entry.year }}</span>
+  </div>
 </a>

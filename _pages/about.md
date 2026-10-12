@@ -91,15 +91,6 @@ no_top_margin: true
   border-color: #fff;
   transform: translateY(-2px);
 }
-.btn-hp.primary {
-  background: #4da6ff;
-  border-color: #4da6ff;
-}
-.btn-hp.primary:hover {
-  background: #1a7fff;
-  border-color: #1a7fff;
-  box-shadow: 0 4px 16px rgba(77,166,255,0.45);
-}
 
 /* ── Section title ────────────────────────────── */
 .sec-head {
@@ -287,11 +278,8 @@ no_top_margin: true
   color: #1a7fff;
 }
 .compact-pub-year {
-  font-size: 1.0rem;
-  font-weight: 500;
-  text-align: center;
+  font-style: normal;
   color: var(--global-text-color-light, #888);
-  line-height: 1.3;
 }
 @media (max-width: 900px) {
   .selected-compact ol.bibliography { grid-template-columns: repeat(3, 1fr); }
@@ -314,7 +302,7 @@ no_top_margin: true
       Engineering AI-driven platforms and ionizable lipid nanoparticles to transform nucleic acid delivery into precision medicine for pediatric cancer and genetic diseases.
     </div>
     <div class="hero-buttons">
-      <a class="btn-hp primary" href="/news/"><i class="ti ti-news"></i>News</a>
+      <a class="btn-hp" href="/news/"><i class="ti ti-news"></i>News</a>
       <a class="btn-hp" href="/members/"><i class="ti ti-users"></i>Members</a>
       <a class="btn-hp" href="/join/"><i class="ti ti-user-plus"></i>Join Us</a>
     </div>
