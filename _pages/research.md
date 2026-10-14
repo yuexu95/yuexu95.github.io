@@ -54,7 +54,8 @@ no_top_margin: true
   font-size: 0.97rem;
   line-height: 1.8;
   margin: 0;
-  max-width: 68ch;
+  position: relative;
+  z-index: 1;
 }
 
 .sec-title {
