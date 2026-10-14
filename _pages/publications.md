@@ -39,6 +39,35 @@ _styles: >
   color: var(--global-text-color-light, #888);
   margin: 0;
 }
+.pub-num {
+  /* follows the body text: dark on a light background, light on a dark one */
+  color: var(--global-text-color);
+  font-weight: 400;
+  margin-right: 0.35rem;
+}
+/* journal names (Science, Nature, …) bold and italic; the year stays regular.
+   The <strong> needs naming directly: `.post article strong` sets it to normal
+   weight, and a rule on the element beats one inherited from .periodical. */
+.publications .periodical {
+  font-weight: 400;
+}
+.publications .periodical strong {
+  font-weight: 700;
+}
+.publications .periodical em {
+  font-style: italic;
+}
+/* no year headings; the year filter at the top right is the only grouping control */
+.publications h2.bibliography {
+  display: none;
+}
+/* the headings used to separate the groups, so keep the gap between them */
+.publications ol.bibliography {
+  margin-bottom: 0;
+}
+.publications ol.bibliography + h2.bibliography + ol.bibliography {
+  margin-top: 0;
+}
 </style>
 
 <div class="pub-header-row">
@@ -62,6 +91,17 @@ _styles: >
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+  // number every paper, newest first: the newest gets the highest number
+  var entries = document.querySelectorAll(".publications ol.bibliography > li");
+  entries.forEach(function (li, i) {
+    var title = li.querySelector(".title");
+    if (!title) return;
+    var num = document.createElement("span");
+    num.className = "pub-num";
+    num.textContent = entries.length - i + ".";
+    title.insertBefore(num, title.firstChild);
+  });
+
   document.getElementById("year-filter").addEventListener("change", function () {
     var selected = this.value;
     document.querySelectorAll("h2.bibliography").forEach(function (h2) {

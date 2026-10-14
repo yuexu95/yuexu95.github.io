@@ -5,6 +5,8 @@
 @use "sass:color";
 
 :root {
+  // journal names and publication numbers; deeper blue so it reads on white
+  --global-accent-color: #1a7fff;
   --global-bg-color: #{$white-color};
   --global-code-bg-color: #{$code-bg-color-light};
   --global-text-color: #{$grey-color-dark};
@@ -76,6 +78,8 @@
 }
 
 html[data-theme="dark"] {
+  // lighter blue so it reads on the dark background
+  --global-accent-color: #4da6ff;
   --global-bg-color: #{$grey-color-dark};
   --global-code-bg-color: #{$code-bg-color-dark};
   --global-text-color: #{$grey-color-light};
