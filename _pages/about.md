@@ -128,9 +128,8 @@ no_top_margin: true
 /* ── Research focus cards ─────────────────────── */
 .research-grid {
   display: grid;
-  /* fixed-width cards, left-aligned (same width as the research page cards) */
-  grid-template-columns: repeat(3, minmax(0, 20rem));
-  justify-content: start;
+  /* three equal cards spanning the centered page column */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 .research-card {
@@ -242,11 +241,11 @@ no_top_margin: true
 .selected-compact {
   margin-top: 0 !important;
 }
-/* fixed-width covers, left-aligned; the row of 5 lines up with the research cards above */
+/* fixed-width covers spread across the page column, so the row lines up with the cards above */
 .selected-compact ol.bibliography {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 11.44rem));
-  justify-content: start;
+  justify-content: space-between;
   column-gap: 1.2rem;
   row-gap: 0;
   list-style: none;

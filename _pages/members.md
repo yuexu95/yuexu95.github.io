@@ -41,11 +41,10 @@ navbar_social: true
   display: inline-block;
 }
 
-/* ── People grid (three fixed-width cards per row, left-aligned; photo on top) ── */
+/* ── People grid (three equal cards per row across the page column; photo on top) ── */
 .people-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 20rem));
-  justify-content: start;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   margin-bottom: 3rem;
 }

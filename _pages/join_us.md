@@ -34,12 +34,11 @@ navbar_social: true
   line-height: 1.75;
 }
 
-/* three fixed-width cards per row, left-aligned (same width as the other pages' cards);
+/* three equal cards per row across the page column (same as the other pages' cards);
    each card keeps its own height so opening one doesn't stretch the others */
 .position-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 20rem));
-  justify-content: start;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: start;
   gap: 1rem;
   margin-bottom: 3rem;

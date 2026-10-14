@@ -116,10 +116,15 @@ no_top_margin: true
 /* ── Project cards ── */
 .proj-grid {
   display: grid;
-  /* fixed-width cards, left-aligned; they shrink only when the screen is narrower than one card */
-  grid-template-columns: repeat(auto-fill, minmax(0, 20rem));
-  justify-content: start;
+  /* three equal columns across the page column; areas with two projects leave the third empty */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+}
+@media (max-width: 760px) {
+  .proj-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .proj-grid { grid-template-columns: 1fr; }
 }
 .proj {
   display: flex;
