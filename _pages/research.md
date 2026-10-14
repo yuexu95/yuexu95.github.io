@@ -158,6 +158,10 @@ no_top_margin: true
   gap: 0.4rem;
   margin-top: auto;
 }
+/* two publications on a card sit side by side rather than stacking */
+.pub-pill {
+  white-space: nowrap;
+}
 .pub-pill {
   display: inline-flex;
   align-items: center;
@@ -196,68 +200,15 @@ a.pub-pill:hover {
 <div class="sec-title">Research Areas</div>
 
 <!-- Area 1 -->
-<section class="area" id="ai-delivery">
-  <div class="area-head">
-    <div class="area-icon"><i class="ti ti-brain"></i></div>
-    <div>
-      <span class="area-num">01</span>
-      <h3>AI for Drug Delivery</h3>
-    </div>
-  </div>
-  <p class="area-desc">We build foundation model-powered and deep learning platforms that autonomously close the loop between computational prediction and experimental validation, dramatically accelerating the discovery of ionizable lipids for nucleic acid delivery.</p>
-  <div class="proj-grid">
-    <div class="proj">
-      <h4>LUMI-lab</h4>
-      <p>A foundation model-driven self-driving laboratory that autonomously designs, synthesizes, and evaluates new ionizable lipid structures for mRNA delivery.</p>
-      <div class="pub-pills"><a class="pub-pill" href="https://doi.org/10.1016/j.cell.2026.01.012" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Cell 2026</a></div>
-    </div>
-    <div class="proj">
-      <h4>AGILE Platform</h4>
-      <p>Active machine learning approach using deep neural networks to accelerate LNP formulation optimization.</p>
-      <div class="pub-pills"><a class="pub-pill" href="https://doi.org/10.1038/s41467-024-50619-z" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Nature Communications 2024</a></div>
-    </div>
-    <div class="proj">
-      <h4>Multi-objective AI</h4>
-      <p>Reinforcement learning framework for simultaneous optimization of potency, tissue selectivity, and tolerability.</p>
-      <div class="pub-pills"><a class="pub-pill" href="https://www.nature.com/articles/s41587-026-03109-0" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Nature Biotechnology 2026</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- Area 2 -->
-<section class="area" id="immunotherapy">
-  <div class="area-head">
-    <div class="area-icon"><i class="ti ti-dna"></i></div>
-    <div>
-      <span class="area-num">02</span>
-      <h3>Cancer Immunotherapy &amp; Gene Therapy</h3>
-    </div>
-  </div>
-  <p class="area-desc">We engineer nucleic acid delivery systems operating on two fronts: reprogramming the immune system to eradicate pediatric tumors, and correcting disease-causing mutations in children with rare genetic diseases.</p>
-  <div class="proj-grid">
-    <div class="proj">
-      <h4>Cancer immunotherapy</h4>
-      <p>Tumor-tailored LNPs for IL-12 circular RNA delivery to activate anti-tumor immunity, and a modular mRNA platform for programmable induction of tumour-specific immunogenic cell death.</p>
-      <div class="pub-pills"><a class="pub-pill" href="https://doi.org/10.1002/adma.202400307" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Advanced Materials 2024</a><a class="pub-pill" href="https://www.nature.com/articles/s41565-025-02045-5" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Nature Nanotechnology 2025</a></div>
-    </div>
-    <div class="proj">
-      <h4>Gene editing for rare disease</h4>
-      <p>Inhaled LNPs delivering base editors to correct lung mutations, and biodegradable LNPs for intrathecal genome editing targeting neurological diseases.</p>
-      <div class="pub-pills"><a class="pub-pill" href="https://www.nature.com/articles/s41563-026-02555-0" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Nature Materials 2026</a><a class="pub-pill" href="https://doi.org/10.1016/j.mattod.2025.11.032" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Materials Today 2025</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- Area 3 -->
 <section class="area" id="lnp-engineering">
   <div class="area-head">
     <div class="area-icon"><i class="ti ti-flask"></i></div>
     <div>
-      <span class="area-num">03</span>
+      <span class="area-num">01</span>
       <h3>Lipid Nanoparticle Engineering</h3>
     </div>
   </div>
-  <p class="area-desc">We apply rational design principles and high-throughput combinatorial chemistry to synthesize structurally diverse ionizable lipids with tunable organ tropism, biodegradability, and endosomal escape efficiency.</p>
+  <p class="area-desc">Building combinatorial ionizable-lipid libraries on high-throughput, automated self-driving laboratory platforms, generating the large, standardized structure–activity datasets that predictive modeling requires.</p>
   <div class="proj-grid">
     <div class="proj">
       <h4>Passerini-3CR</h4>
@@ -268,6 +219,59 @@ a.pub-pill:hover {
       <h4>Ugi-3CR</h4>
       <p>High-throughput synthesis libraries enabling rapid SAR exploration across lipid tail, head group, and linker space.</p>
       <div class="pub-pills"><a class="pub-pill" href="https://doi.org/10.1073/pnas.2309472120" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>PNAS 2023</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Area 2 -->
+<section class="area" id="ai-delivery">
+  <div class="area-head">
+    <div class="area-icon"><i class="ti ti-brain"></i></div>
+    <div>
+      <span class="area-num">02</span>
+      <h3>AI for Drug Delivery</h3>
+    </div>
+  </div>
+  <p class="area-desc">Training foundation models on these datasets to discover, characterize, and optimize ionizable lipids, yielding non-viral carriers with tunable organ tropism.</p>
+  <div class="proj-grid">
+    <div class="proj">
+      <h4>LUMI-lab</h4>
+      <p>A foundation model-driven self-driving laboratory that autonomously designs, synthesizes, and evaluates new ionizable lipid structures for mRNA delivery.</p>
+      <div class="pub-pills"><a class="pub-pill" href="https://doi.org/10.1016/j.cell.2026.01.012" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Cell 2026</a></div>
+    </div>
+    <div class="proj">
+      <h4>AGILE Platform</h4>
+      <p>Active machine learning approach using deep neural networks to accelerate LNP formulation optimization.</p>
+      <div class="pub-pills"><a class="pub-pill" href="https://doi.org/10.1038/s41467-024-50619-z" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Nat. Commun. 2024</a></div>
+    </div>
+    <div class="proj">
+      <h4>Multi-objective AI</h4>
+      <p>Reinforcement learning framework for simultaneous optimization of potency, tissue selectivity, and tolerability.</p>
+      <div class="pub-pills"><a class="pub-pill" href="https://www.nature.com/articles/s41587-026-03109-0" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Nat. Biotechnol. 2026</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- Area 3 -->
+<section class="area" id="immunotherapy">
+  <div class="area-head">
+    <div class="area-icon"><i class="ti ti-dna"></i></div>
+    <div>
+      <span class="area-num">03</span>
+      <h3>Gene Therapeutics</h3>
+    </div>
+  </div>
+  <p class="area-desc">Translating these organ-targeted carriers into precise in vivo nucleic acid medicines against pediatric tumors.</p>
+  <div class="proj-grid">
+    <div class="proj">
+      <h4>Cancer immunotherapy</h4>
+      <p>Tumor-tailored LNPs for IL-12 circular RNA delivery to activate anti-tumor immunity, and a modular mRNA platform for programmable induction of tumour-specific immunogenic cell death.</p>
+      <div class="pub-pills"><a class="pub-pill" href="https://doi.org/10.1002/adma.202400307" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Adv. Mater. 2024</a><a class="pub-pill" href="https://www.nature.com/articles/s41565-025-02045-5" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Nat. Nanotechnol. 2025</a></div>
+    </div>
+    <div class="proj">
+      <h4>Gene editing for rare disease</h4>
+      <p>Inhaled LNPs delivering base editors to correct lung mutations, and biodegradable LNPs for intrathecal genome editing targeting neurological diseases.</p>
+      <div class="pub-pills"><a class="pub-pill" href="https://www.nature.com/articles/s41563-026-02555-0" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Nat. Mater. 2026</a><a class="pub-pill" href="https://doi.org/10.1016/j.mattod.2025.11.032" target="_blank" rel="noopener"><i class="ti ti-file-text"></i>Mater. Today 2025</a></div>
     </div>
   </div>
 </section>

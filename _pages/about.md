@@ -241,11 +241,11 @@ no_top_margin: true
 .selected-compact {
   margin-top: 0 !important;
 }
-/* fixed-width covers spread across the page column, so the row lines up with the cards above */
+/* fixed-width covers, left-aligned (not stretched across the page column) */
 .selected-compact ol.bibliography {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 11.44rem));
-  justify-content: space-between;
+  grid-template-columns: repeat(7, minmax(0, 11.44rem));
+  justify-content: start;
   column-gap: 1.2rem;
   row-gap: 0;
   list-style: none;
@@ -255,7 +255,7 @@ no_top_margin: true
   margin-bottom: 0;
 }
 /* Show only one row: the pinned Cell cover plus (columns - 1) others */
-.selected-compact ol.bibliography li:nth-child(n+5 of :not(:has(.pin-first))) {
+.selected-compact ol.bibliography li:nth-child(n+7 of :not(:has(.pin-first))) {
   display: none;
 }
 .selected-compact ol.bibliography li:has(.pin-first) {
@@ -331,22 +331,22 @@ no_top_margin: true
 </div>
 
 <div class="research-grid">
+  <a class="research-card" href="/research/#lnp-engineering">
+    <div class="rc-icon-wrap"><i class="ti ti-flask"></i></div>
+    <h5>Lipid Nanoparticle Engineering</h5>
+    <p>Combinatorial ionizable-lipid libraries built on automated self-driving platforms, generating standardized structure–activity datasets.</p>
+    <span class="rc-more">Learn more →</span>
+  </a>
   <a class="research-card" href="/research/#ai-delivery">
     <div class="rc-icon-wrap"><i class="ti ti-brain"></i></div>
     <h5>AI for Drug Delivery</h5>
-    <p>Foundation models and self-driving labs that accelerate the discovery of ionizable lipids.</p>
+    <p>Foundation models trained on these datasets to discover and optimize lipids with tunable organ tropism.</p>
     <span class="rc-more">Learn more →</span>
   </a>
   <a class="research-card" href="/research/#immunotherapy">
     <div class="rc-icon-wrap"><i class="ti ti-dna"></i></div>
-    <h5>Cancer Immunotherapy &amp; Gene Therapy</h5>
-    <p>Nucleic acid medicines that reprogram immunity against pediatric tumors and correct disease-causing mutations.</p>
-    <span class="rc-more">Learn more →</span>
-  </a>
-  <a class="research-card" href="/research/#lnp-engineering">
-    <div class="rc-icon-wrap"><i class="ti ti-flask"></i></div>
-    <h5>Lipid Nanoparticle Engineering</h5>
-    <p>Combinatorial chemistry for biodegradable lipids with tunable organ tropism.</p>
+    <h5>Gene Therapeutics</h5>
+    <p>Organ-targeted carriers translated into precise in vivo nucleic acid medicines against pediatric tumors.</p>
     <span class="rc-more">Learn more →</span>
   </a>
 </div>
