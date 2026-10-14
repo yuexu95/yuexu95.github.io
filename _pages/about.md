@@ -19,7 +19,7 @@ no_top_margin: true
   border-radius: 14px;
   overflow: hidden;
   margin: 1rem 0 2.6rem;
-  min-height: 300px;
+  min-height: 18.75rem;
   display: flex;
 }
 .hero-bg {
@@ -98,8 +98,6 @@ no_top_margin: true
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
-  /* same width as the fixed card / cover rows below, so the "All …" link ends at their right edge */
-  max-width: 62rem;
 }
 .sec-more {
   font-size: 0.85rem;

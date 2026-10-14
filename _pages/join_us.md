@@ -34,11 +34,21 @@ navbar_social: true
   line-height: 1.75;
 }
 
+/* three fixed-width cards per row, left-aligned (same width as the other pages' cards);
+   each card keeps its own height so opening one doesn't stretch the others */
 .position-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 20rem));
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
   margin-bottom: 3rem;
+}
+@media (max-width: 760px) {
+  .position-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .position-grid { grid-template-columns: 1fr; }
 }
 .position-card {
   border: 1px solid var(--global-divider-color, #e0e0e0);
