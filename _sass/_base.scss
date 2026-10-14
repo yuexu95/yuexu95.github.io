@@ -11,8 +11,10 @@ html {
 }
 
 // Every page's content sits in one centered column; card grids split it into equal columns
+$page-column-width: 72rem;
+
 .post {
-  max-width: 72rem;
+  max-width: $page-column-width;
   margin-left: auto;
   margin-right: auto;
 }
@@ -280,10 +282,22 @@ ul.task-list input[type="checkbox"] {
   opacity: 0.95;
 }
 
+// Navbar uses the same centered column as the page content (plus the container's 15px side padding)
+.navbar > .container {
+  max-width: calc(#{$page-column-width} + 30px);
+}
+
 // Larger menu items (incl. search and theme toggle) on desktop, in step with the page text
 @media (min-width: 1000px) {
   .navbar .navbar-nav {
     font-size: 1.15rem;
+  }
+}
+
+// First menu item's text starts exactly at the content's left edge
+@media (min-width: 576px) {
+  .navbar .navbar-nav > .nav-item:first-child > .nav-link {
+    padding-left: 0;
   }
 }
 
