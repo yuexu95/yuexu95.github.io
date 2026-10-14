@@ -101,6 +101,15 @@ navbar_social: true
   color: #fff;
 }
 .tool-card[hidden] { display: none; }
+
+@media (max-width: 600px) {
+  /* move the "Open in full" button below the title so the text isn't squeezed */
+  .tool-card-header { flex-wrap: wrap; align-items: flex-start; gap: 0.6rem 0.8rem; padding: 1rem 1.1rem; }
+  .tool-card-header > div { flex: 1 1 calc(100% - 2.4rem); min-width: 0; }
+  .tool-card-header a { margin-left: 2.4rem; }
+  .tool-tab { font-size: 0.85rem; padding: 0.35rem 0.85rem; }
+  .tool-embed { height: 600px; }
+}
 </style>
 
 <div class="resource-header">

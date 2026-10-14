@@ -901,6 +901,40 @@ footer.sticky-bottom {
   }
 }
 
+// Phones: small cover thumbnail beside the entry instead of a full-width cover above it
+@media (max-width: 575.98px) {
+  .publications ol.bibliography li {
+    margin-bottom: 1.4rem;
+
+    > .row {
+      flex-wrap: nowrap;
+    }
+
+    .abbr {
+      flex: 0 0 84px;
+      max-width: 84px;
+      padding-right: 0;
+      margin-bottom: 0;
+
+      // the venue is already shown in the entry text
+      abbr {
+        display: none;
+      }
+
+      .preview {
+        width: 100%;
+        margin-top: 0.2rem;
+      }
+    }
+
+    > .row > [id] {
+      flex: 1 1 0;
+      min-width: 0;
+      font-size: 0.9rem;
+    }
+  }
+}
+
 // Rouge Color Customization
 figure.highlight {
   margin: 0 0 1rem;

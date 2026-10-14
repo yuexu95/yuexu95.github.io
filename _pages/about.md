@@ -180,16 +180,28 @@ no_top_margin: true
 
 @media (max-width: 760px) {
   .research-grid { grid-template-columns: 1fr; }
-  .research-card { flex-direction: row; gap: 0.9rem; align-items: flex-start; }
-  .rc-icon-wrap { flex-shrink: 0; margin-bottom: 0; }
+  /* icon on the left, title stacked above description on the right */
+  .research-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.9rem;
+    align-items: start;
+    padding: 1rem;
+  }
+  .rc-icon-wrap { grid-row: span 2; margin-bottom: 0; }
   .rc-more { display: none; }
   .research-card p { margin: 0; }
 }
 @media (max-width: 600px) {
-  .hero-wrap { min-height: 260px; }
-  .hero-content { padding: 1.4rem 1.3rem; }
+  .hero-wrap { min-height: 240px; margin-bottom: 2rem; }
+  .hero-content { padding: 1.3rem 1.1rem; }
   .hero-title { font-size: 1.7rem; }
-  .hero-tagline { font-size: 0.95rem; }
+  .hero-subtitle { font-size: 0.85rem; align-items: flex-start; }
+  .hero-subtitle i { margin-top: 0.15rem; }
+  .hero-tagline { font-size: 0.92rem; line-height: 1.55; margin: 0.7rem 0 1rem; }
+  .hero-buttons { gap: 0.45rem; }
+  .btn-hp { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+  .sec-head-pubs { margin-top: 2rem; }
 }
 
 /* ── Abbr badges (Cell, Nat. Biotechnol., etc.) ─ */
