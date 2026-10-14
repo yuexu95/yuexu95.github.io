@@ -4,6 +4,12 @@
 
 // Typography
 
+// Scale all rem-based sizes up on wide screens now that content spans the full width:
+// 16px up to ~1000px wide, growing to 21px at ~1900px and beyond.
+html {
+  font-size: clamp(16px, 0.55vw + 10.5px, 21px);
+}
+
 p,
 h1,
 h2,
@@ -897,6 +903,26 @@ footer.sticky-bottom {
     }
     div.award.hidden.open {
       border-color: var(--global-highlight-color);
+    }
+  }
+}
+
+// Wider screens: fixed-width cover thumbnail so it doesn't scale with the full-width container
+@media (min-width: 576px) {
+  .publications ol.bibliography li {
+    > .row {
+      flex-wrap: nowrap;
+    }
+
+    .abbr {
+      flex: 0 0 12.5rem;
+      max-width: 12.5rem;
+    }
+
+    > .row > [id] {
+      flex: 1 1 0;
+      max-width: none;
+      min-width: 0;
     }
   }
 }

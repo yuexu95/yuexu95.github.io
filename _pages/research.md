@@ -116,7 +116,9 @@ no_top_margin: true
 /* ── Project cards ── */
 .proj-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* fixed-width cards, left-aligned; they shrink only when the screen is narrower than one card */
+  grid-template-columns: repeat(auto-fill, minmax(0, 20rem));
+  justify-content: start;
   gap: 1rem;
 }
 .proj {

@@ -19,6 +19,11 @@ _styles: >
   display: inline-block;
   margin-bottom: 1.2rem;
 }
+/* larger news text, still below the section title size */
+.news .news-item {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
 </style>
 
 <div class="sec-title">News</div>

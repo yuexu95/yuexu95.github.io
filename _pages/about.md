@@ -40,7 +40,7 @@ no_top_margin: true
   justify-content: flex-end;
 }
 .hero-title {
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   font-weight: 800;
   color: #fff;
   line-height: 1.1;
@@ -50,17 +50,17 @@ no_top_margin: true
 .hero-subtitle {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.95rem;
+  gap: 0.45rem;
+  font-size: 1.15rem;
   color: #dbe9f6;
   margin-bottom: 0.15rem;
   text-shadow: 0 1px 6px rgba(0,0,0,0.7);
 }
-.hero-subtitle i { color: #4da6ff; font-size: 1rem; }
+.hero-subtitle i { color: #4da6ff; font-size: 1.2rem; }
 .hero-tagline {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   color: #f0f8ff;
-  max-width: 680px;
+  max-width: 46rem;
   line-height: 1.65;
   margin: 0.9rem 0 1.3rem;
   text-shadow: 0 1px 6px rgba(0,0,0,0.7);
@@ -76,7 +76,7 @@ no_top_margin: true
   gap: 0.4rem;
   padding: 0.55rem 1.1rem;
   border-radius: 999px;
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none !important;
   transition: all 0.2s ease;
@@ -98,6 +98,8 @@ no_top_margin: true
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
+  /* same width as the fixed card / cover rows below, so the "All …" link ends at their right edge */
+  max-width: 62rem;
 }
 .sec-more {
   font-size: 0.85rem;
@@ -128,7 +130,9 @@ no_top_margin: true
 /* ── Research focus cards ─────────────────────── */
 .research-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* fixed-width cards, left-aligned (same width as the research page cards) */
+  grid-template-columns: repeat(3, minmax(0, 20rem));
+  justify-content: start;
   gap: 1rem;
 }
 .research-card {
@@ -240,9 +244,11 @@ no_top_margin: true
 .selected-compact {
   margin-top: 0 !important;
 }
+/* fixed-width covers, left-aligned; the row of 5 lines up with the research cards above */
 .selected-compact ol.bibliography {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 11.44rem));
+  justify-content: start;
   column-gap: 1.2rem;
   row-gap: 0;
   list-style: none;

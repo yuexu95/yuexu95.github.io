@@ -41,18 +41,20 @@ navbar_social: true
   display: inline-block;
 }
 
-/* ── People list (one card per row: photo left, details right) ── */
+/* ── People grid (three fixed-width cards per row, left-aligned; photo on top) ── */
 .people-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 20rem));
+  justify-content: start;
+  gap: 1rem;
   margin-bottom: 3rem;
 }
 .pi-card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  gap: 1.8rem;
+  text-align: center;
+  gap: 1rem;
   width: 100%;
   min-height: 0;
   border: 1px solid var(--global-divider-color, #e0e0e0);
@@ -63,14 +65,15 @@ navbar_social: true
   overflow-y: auto;
 }
 .pi-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.09); }
-/* photo | text | icons — previous positions open beneath the text */
+/* text, then icons; previous positions open beneath the icons */
 .pi-body {
   flex: 1;
+  align-self: stretch;
   min-width: 0;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
   align-items: center;
-  column-gap: 1.5rem;
+  row-gap: 0.8rem;
 }
 .pi-info { display: contents; }
 .pi-prev-list { grid-column: 1 / -1; }
@@ -123,6 +126,7 @@ navbar_social: true
 .pi-links {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.4rem;
 }
 .pi-link {
@@ -181,10 +185,11 @@ navbar_social: true
   font-weight: 600;
 }
 
-@media (max-width: 620px) {
-  .pi-card { flex-direction: column; text-align: center; gap: 1rem; }
-  .pi-body { grid-template-columns: 1fr; row-gap: 0.8rem; }
-  .pi-links { justify-content: center; }
+@media (max-width: 760px) {
+  .people-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .people-grid { grid-template-columns: 1fr; }
 }
 </style>
 
