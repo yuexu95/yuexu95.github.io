@@ -6,38 +6,36 @@
       {% assign news_items = news_items | limit: news_limit %}
     {% endif %}
     {% unless include.limit %}
-      <!-- Full news page: publications-style two-column layout -->
-      {% for item in news_items %}
-        {% assign highlighted_title = item.title | replace: 'Yue Xu', '<span class="news-name-highlight">Yue Xu</span>' %}
-        <div class="row news-item" style="margin-bottom: 2rem;">
-          <div class="col-sm-12">
-            <div style="display: flex; align-items: baseline; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.4rem;">
-              <span style="white-space: nowrap; font-weight: normal;">
-                {% if item.redirect %}
-                  <a href="{{ item.redirect }}" target="_blank" style="color: inherit; text-decoration: underline">{{ item.date | date: '%b %Y' }}</a>
-                {% elsif item.permalink %}
-                  <a href="{{ item.url | relative_url }}" style="color: inherit; text-decoration: underline">{{ item.date | date: '%b %Y' }}</a>
-                {% else %}
-                  {{ item.date | date: '%b %Y' }}
-                {% endif %}
-              </span>
-              <span>
-                {% if item.inline %}
-                  {{ item.content | remove: '<p>' | remove: '</p>' | replace: 'Yue Xu', '<span class="news-name-highlight">Yue Xu</span>' | emojify }}
-                {% else %}
-                  {{ highlighted_title }}
-                {% endif %}
-              </span>
-              {% if item.location %}
-                <span style="white-space: nowrap; color: var(--global-text-color)">&mdash; {{ item.location }}</span>
+      <!-- Full news page: two-column list (date | text) -->
+      <div class="news-list">
+        {% for item in news_items %}
+          {% assign highlighted_title = item.title | replace: 'Yue Xu', '<span class="news-name-highlight">Yue Xu</span>' %}
+          <div class="news-item">
+            <div class="news-date">
+              {% if item.redirect %}
+                <a href="{{ item.redirect }}" target="_blank">{{ item.date | date: '%b %Y' }}</a>
+              {% elsif item.permalink %}
+                <a href="{{ item.url | relative_url }}">{{ item.date | date: '%b %Y' }}</a>
+              {% else %}
+                {{ item.date | date: '%b %Y' }}
               {% endif %}
             </div>
-            {% unless item.inline %}
-              {{ item.content }}
-            {% endunless %}
+            <div class="news-text">
+              {% if item.inline %}
+                {{ item.content | remove: '<p>' | remove: '</p>' | replace: 'Yue Xu', '<span class="news-name-highlight">Yue Xu</span>' | emojify }}
+              {% else %}
+                {{ highlighted_title }}
+              {% endif %}
+              {% if item.location %}
+                <span class="news-location">&mdash; {{ item.location }}</span>
+              {% endif %}
+              {% unless item.inline %}
+                {{ item.content }}
+              {% endunless %}
+            </div>
           </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
     {% else %}
       <!-- Homepage: compact table view -->
       <div
