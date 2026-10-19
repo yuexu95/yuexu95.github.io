@@ -108,6 +108,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_10.html";
+            },},{id: "news-yue-xu-was-selected-as-editorial-board-member-of-bioconjugate-chemistry-acs",
+          title: 'Yue Xu was selected as editorial board member of Bioconjugate Chemistry (ACS)',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_11.html";
             },},{
         id: 'social-email',
         title: 'email',
