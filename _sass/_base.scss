@@ -248,12 +248,15 @@ ul.task-list input[type="checkbox"] {
   align-items: baseline;
 }
 
-.news .news-list .news-date {
+// News dates (news page + homepage): bold, underlined, carry the link
+.news .news-date {
   white-space: nowrap;
+  font-weight: 700;
+  text-decoration: underline;
 
   a {
     color: inherit;
-    text-decoration: none;
+    text-decoration: underline;
   }
 
   a:hover {
@@ -261,8 +264,10 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-.news .news-list .news-location {
-  white-space: nowrap;
+// City / country on its own line under the news text
+.news .news-location {
+  margin-top: 0.2rem;
+  font-size: 0.85em;
   color: var(--global-text-color-light);
 }
 

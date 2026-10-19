@@ -9,7 +9,6 @@
       <!-- Full news page: two-column list (date | text) -->
       <div class="news-list">
         {% for item in news_items %}
-          {% assign highlighted_title = item.title | replace: 'Yue Xu', '<span class="news-name-highlight">Yue Xu</span>' %}
           <div class="news-item">
             <div class="news-date">
               {% if item.redirect %}
@@ -22,12 +21,12 @@
             </div>
             <div class="news-text">
               {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | replace: 'Yue Xu', '<span class="news-name-highlight">Yue Xu</span>' | emojify }}
+                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
               {% else %}
-                {{ highlighted_title }}
+                {{ item.title }}
               {% endif %}
               {% if item.location %}
-                <span class="news-location">&mdash; {{ item.location }}</span>
+                <div class="news-location">{{ item.location }}</div>
               {% endif %}
               {% unless item.inline %}
                 {{ item.content }}
@@ -47,28 +46,25 @@
         <table class="table table-sm table-borderless" style="border-spacing: 0; border-collapse: collapse">
           {% for item in news_items %}
             <tr>
-              <th scope="row" style="width: fit-content; white-space: nowrap; padding-right: 1rem; font-weight: normal">
+              <th scope="row" class="news-date" style="width: fit-content; white-space: nowrap; padding-right: 1rem">
                 {% if item.redirect %}
-                  <a href="{{ item.redirect }}" target="_blank" style="color: inherit; text-decoration: underline">{{ item.date | date: '%b %Y' }}</a>
+                  <a href="{{ item.redirect }}" target="_blank">{{ item.date | date: '%b %Y' }}</a>
                 {% elsif item.inline == false or item.inline == null %}
-                  <a href="{{ item.url | relative_url }}" style="color: inherit; text-decoration: underline">{{ item.date | date: '%b %Y' }}</a>
+                  <a href="{{ item.url | relative_url }}">{{ item.date | date: '%b %Y' }}</a>
                 {% else %}
                   {{ item.date | date: '%b %Y' }}
                 {% endif %}
               </th>
               <td>
-                {% assign highlighted_title = item.title | replace: 'Yue Xu', '<span class="news-name-highlight">Yue Xu</span>' %}
                 {% if item.inline %}
-                  {{ item.content | remove: '<p>' | remove: '</p>' | replace: 'Yue Xu', '<span class="news-name-highlight">Yue Xu</span>' | emojify }}
+                  {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
                 {% else %}
-                  {{ highlighted_title }}
+                  {{ item.title }}
+                {% endif %}
+                {% if item.location %}
+                  <div class="news-location">{{ item.location }}</div>
                 {% endif %}
               </td>
-              {% if item.location %}
-                <td class="text-end" style="white-space: nowrap; font-size: 1.50em; color: var(--global-text-color)">&mdash; {{ item.location }}</td>
-              {% else %}
-                <td></td>
-              {% endif %}
             </tr>
           {% endfor %}
         </table>

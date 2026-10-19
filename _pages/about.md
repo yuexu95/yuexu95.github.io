@@ -126,10 +126,6 @@ announcements:
 .sec-head-news { margin-top: 2.6rem; }
 /* latest news list at the bottom of the homepage */
 .news-home .news { font-size: 0.95rem !important; }
-.news-home .news td.text-end {
-  font-size: 0.85rem !important;
-  color: var(--global-text-color-light, #888) !important;
-}
 .sec-head h2 a,
 .post article > h2 a {
   text-decoration: none !important;
