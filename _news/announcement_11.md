@@ -1,7 +1,7 @@
 ---
 date: 2026-10-15
-title: "Yue Xu was selected as editorial board member of Bioconjugate Chemistry (ACS)"
+title: "The Xu Lab has been selected as a Research Pilot Project Leader in the Kansas Institute for Precision Medicine COBRE."
 inline: false
-location: "USA"
-redirect: https://pubs.acs.org/bcches/pages/Editorial_Board
+location: "Kansas City, KC, USA"
+redirect: https://www.kumc.edu/research/kansas-institute-for-precision-medicine-cobre.html
 ---
