@@ -9,7 +9,7 @@ no_top_margin: true
 announcements:
   enabled: true
   scrollable: false
-  limit: 5
+  limit: 3
 ---
 
 <style>

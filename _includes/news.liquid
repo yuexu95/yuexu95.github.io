@@ -1,10 +1,7 @@
 <div class="news" style="{% unless include.limit %}font-size: 1em;{% else %}font-size: 0.5em;{% endunless %} color: var(--global-text-color)">
   {% assign news_items = site.news | sort: 'date' | reverse %}
   {% if news_items.size > 0 %}
-    {% if include.limit %}
-      {% assign news_limit = page.announcements.limit | default: 5 %}
-      {% assign news_items = news_items | limit: news_limit %}
-    {% endif %}
+    {% assign news_limit = page.announcements.limit | default: 5 %}
     {% unless include.limit %}
       <!-- Full news page: two-column list (date | text) -->
       <div class="news-list">
@@ -44,7 +41,7 @@
         {% endif %}
       >
         <table class="table table-sm table-borderless" style="border-spacing: 0; border-collapse: collapse">
-          {% for item in news_items %}
+          {% for item in news_items limit: news_limit %}
             <tr>
               <th scope="row" class="news-date" style="width: fit-content; white-space: nowrap; padding-right: 1rem">
                 {% if item.redirect %}
