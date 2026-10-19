@@ -113,8 +113,8 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_11.html";
-            },},{id: "news-the-xu-lab-has-been-selected-as-a-research-pilot-project-leader-in-the-kansas-institute-for-precision-medicine-cobre",
-          title: 'The Xu Lab has been selected as a Research Pilot Project Leader in...',
+            },},{id: "news-yue-xu-has-been-selected-as-an-editorial-board-member-of-bioconjugate-chemistry-acs",
+          title: 'Yue xu has been selected as an editorial board member of Bioconjugate Chemistry...',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_12.html";
