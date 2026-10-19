@@ -6,6 +6,10 @@ nav: true
 nav_order: 1
 selected_papers: true
 no_top_margin: true
+announcements:
+  enabled: true
+  scrollable: false
+  limit: 5
 ---
 
 <style>
@@ -119,6 +123,13 @@ no_top_margin: true
   display: inline-block !important;
 }
 .sec-head-pubs { margin-top: 2.6rem; }
+.sec-head-news { margin-top: 2.6rem; }
+/* latest news list at the bottom of the homepage */
+.news-home .news { font-size: 0.95rem !important; }
+.news-home .news td.text-end {
+  font-size: 0.85rem !important;
+  color: var(--global-text-color-light, #888) !important;
+}
 .sec-head h2 a,
 .post article > h2 a {
   text-decoration: none !important;
@@ -202,7 +213,7 @@ no_top_margin: true
   .hero-tagline { font-size: 0.92rem; line-height: 1.55; margin: 0.7rem 0 1rem; }
   .hero-buttons { gap: 0.45rem; }
   .btn-hp { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
-  .sec-head-pubs { margin-top: 2rem; }
+  .sec-head-pubs, .sec-head-news { margin-top: 2rem; }
 }
 
 /* ── Abbr badges (Cell, Nat. Biotechnol., etc.) ─ */
