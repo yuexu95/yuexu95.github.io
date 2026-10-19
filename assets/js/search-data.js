@@ -73,11 +73,6 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/bcm-grand-rounds/";
-            },},{id: "news-yue-xu-will-join-children-39-s-mercy-and-umkc-kumc-as-pi-and-assistant-professor",
-          title: 'Yue Xu will join Children&amp;#39;s Mercy and UMKC/KUMC as PI and Assistant Professor...',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2.html";
             },},{id: "news-yue-xu-was-invited-to-speak-at-nih-nci-as-a-2026-cap-it-early-career-investigator",
           title: 'Yue Xu was invited to Speak at NIH NCI as a 2026 CAP-IT...',
           description: "",
@@ -104,7 +99,7 @@ ninja.data = [{
           section: "News",handler: () => {
               window.location.href = "/news/announcement_9.html";
             },},{id: "news-welcome-yukuan-andy-pan-joined-the-children-s-mercy-research-institute-as-a-data-scientist",
-          title: 'Welcome Yukuan(Andy) Pan joined the Children’s Mercy Research Institute as a data scientist...',
+          title: 'Welcome Yukuan (Andy) Pan joined the Children’s Mercy Research Institute as a data...',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_10.html";
@@ -114,7 +109,7 @@ ninja.data = [{
           section: "News",handler: () => {
               window.location.href = "/news/announcement_11.html";
             },},{id: "news-yue-xu-has-been-selected-as-an-editorial-board-member-of-bioconjugate-chemistry-acs",
-          title: 'Yue xu has been selected as an editorial board member of Bioconjugate Chemistry...',
+          title: 'Yue Xu has been selected as an editorial board member of Bioconjugate Chemistry...',
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_12.html";
