@@ -120,6 +120,7 @@ navbar_social: true
 <div class="tool-tabs" role="tablist">
   <button class="tool-tab active" role="tab" aria-selected="true" data-target="tool-formulation"><i class="ti ti-calculator"></i> LNP Formulation Calculator</button>
   <button class="tool-tab" role="tab" aria-selected="false" data-target="tool-inventory"><i class="ti ti-package"></i> Lab Inventory</button>
+  <button class="tool-tab" role="tab" aria-selected="false" data-target="tool-dataviz"><i class="ti ti-chart-bar"></i> Data Visualization</button>
 </div>
 
 <div class="tool-card" id="tool-formulation" role="tabpanel">
@@ -152,6 +153,23 @@ navbar_social: true
     class="tool-embed"
     src="https://lab-inventory-2s9.pages.dev/"
     title="Lab Inventory"
+    loading="lazy"
+  ></iframe>
+</div>
+
+<div class="tool-card" id="tool-dataviz" role="tabpanel" hidden>
+  <div class="tool-card-header">
+    <i class="ti ti-chart-bar"></i>
+    <div>
+      <h3>Data Visualization</h3>
+      <p>Explore and visualize Xu Lab experimental data.</p>
+    </div>
+    <a href="https://datavisualization.cpuxuyue.workers.dev/" target="_blank" rel="noopener">Open in full ↗</a>
+  </div>
+  <iframe
+    class="tool-embed"
+    src="https://datavisualization.cpuxuyue.workers.dev/"
+    title="Data Visualization"
     loading="lazy"
   ></iframe>
 </div>
